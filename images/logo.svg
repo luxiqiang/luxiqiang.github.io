@@ -1,0 +1,20 @@
+<svg width="1360" height="800" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="802" width="1362" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text opacity="0.5" stroke="#000" transform="matrix(18.01383032913936,0,0,21.53428498356182,-2152.272564213975,-2129.9366028115373) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="125.772094" x="143.180642" stroke-width="0.3" fill="#8391AE">希妍</text>
+  <g stroke="null" id="svg_8">
+   <path stroke="null" id="svg_5" d="m229.070317,399.999995l215.070317,119.361112l-215.070317,119.361112l-215.070317,-119.361112l215.070317,-119.361112z" fill="#2366d1"/>
+   <path stroke="null" id="svg_6" d="m229.070317,280.638883l215.070317,119.361112l-215.070317,119.361112l-215.070317,-119.361112l215.070317,-119.361112z" fill="#609dff"/>
+   <path stroke="null" id="svg_7" d="m229.070317,161.277771l215.070317,119.361112l-215.070317,119.361112l-215.070317,-119.361112l215.070317,-119.361112z" fill="#a4c7ff"/>
+  </g>
+ </g>
+</svg>
