@@ -1,24 +1,20 @@
 <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
- <defs>
-  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_1_blur">
-   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
-  </filter>
- </defs>
+
  <g>
   <title>background</title>
-  <rect fill="#ffffff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
   <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
    <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
   </g>
  </g>
  <g>
   <title>Layer 1</title>
-  <text opacity="0.5" filter="url(#svg_1_blur)" font-style="normal" font-weight="normal" xml:space="preserve" text-anchor="start" font-family="Arvo, sans-serif" font-size="40" id="svg_1" y="56.109375" x="74" stroke-width="0" stroke="#000" fill="#C97A86">希妍</text>
-  <g id="svg_8">
-   <path id="svg_5" d="m45.000011,43.999991l30.070324,17.36111l-30.070324,17.36111l-30.070324,-17.36111l30.070324,-17.36111z" fill="#2366d1"/>
-   <path id="svg_6" d="m45.000011,26.638881l30.070324,17.36111l-30.070324,17.36111l-30.070324,-17.36111l30.070324,-17.36111z" fill="#609dff"/>
-   <path id="svg_7" d="m45.000011,9.277771l30.070324,17.36111l-30.070324,17.36111l-30.070324,-17.36111l30.070324,-17.36111z" fill="#a4c7ff"/>
+  <text opacity="0.5" stroke="#000" transform="matrix(7.074510361400313,0,0,9.0278292953613,-701.1883045441974,-851.2161814463312) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="124.729164" x="133.096782" stroke-width="0.3" fill="#8391AE">希妍</text>
+  <g stroke="null" id="svg_8">
+   <path stroke="null" id="svg_5" d="m118.070325,198.499991l119.070325,77.61111l-119.070325,77.61111l-119.070325,-77.61111l119.070325,-77.61111z" fill="#2366d1"/>
+   <path stroke="null" id="svg_6" d="m118.070325,120.888881l119.070325,77.61111l-119.070325,77.61111l-119.070325,-77.61111l119.070325,-77.61111z" fill="#609dff"/>
+   <path stroke="null" id="svg_7" d="m118.070325,43.277771l119.070325,77.61111l-119.070325,77.61111l-119.070325,-77.61111l119.070325,-77.61111z" fill="#a4c7ff"/>
   </g>
  </g>
 </svg>
