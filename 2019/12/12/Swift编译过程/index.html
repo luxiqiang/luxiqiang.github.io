@@ -10,16 +10,16 @@
 <title>Swift编译过程 - luxq blog</title>
 
 
-    <meta name="description" content="不积跬步无以至千里">
+    <meta name="description" content="不积跬步无以至千里          LLVMLLVM是构架编译器(compiler)的框架系统，以C++编写而成，用于优化以任意程序语言编写的程序的编译时间(compile-time)、链接时间(link-time)、运行时间(run-time)以及空闲时间(idle-time)。 LLVMIRLLVM中间层表示 ClangClang是一个由Apple主导编写，基于LLVM的C&#x2F;C++&#x2F;Obj">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift编译过程">
 <meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2019&#x2F;12&#x2F;12&#x2F;Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="luxq blog">
-<meta property="og:description" content="不积跬步无以至千里">
+<meta property="og:description" content="不积跬步无以至千里          LLVMLLVM是构架编译器(compiler)的框架系统，以C++编写而成，用于优化以任意程序语言编写的程序的编译时间(compile-time)、链接时间(link-time)、运行时间(run-time)以及空闲时间(idle-time)。 LLVMIRLLVM中间层表示 ClangClang是一个由Apple主导编写，基于LLVM的C&#x2F;C++&#x2F;Obj">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-12T08:33:34.349Z">
+<meta property="og:updated_time" content="2019-12-12T08:53:09.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -141,7 +141,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 27 个字)
+                    1 分钟 读完 (大约 220 个字)
                 </span>
                 
                 
@@ -159,8 +159,22 @@
 </blockquote>
 <img src="/2019/12/12/Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/pic1.png" class title="This is an example image">
 
+
+
 <img src="/2019/12/12/Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/pic2.png" class title="This is an example image">
 
+
+
+<h3 id="LLVM"><a href="#LLVM" class="headerlink" title="LLVM"></a>LLVM</h3><p>LLVM是构架<a href="https://baike.baidu.com/item/编译器/8853067" target="_blank" rel="noopener">编译器</a>(compiler)的框架系统，以C++编写而成，用于优化以任意程序语言编写的程序的编译时间(compile-time)、链接时间(link-time)、运行时间(run-time)以及空闲时间(idle-time)。</p>
+<h3 id="LLVMIR"><a href="#LLVMIR" class="headerlink" title="LLVMIR"></a>LLVMIR</h3><p>LLVM中间层表示</p>
+<h3 id="Clang"><a href="#Clang" class="headerlink" title="Clang"></a>Clang</h3><p>Clang是一个由Apple主导编写，基于LLVM的C/C++/Objective-C轻量编译器</p>
+<h3 id="swiftc的命令行"><a href="#swiftc的命令行" class="headerlink" title="swiftc的命令行"></a>swiftc的命令行</h3><ul>
+<li>swiftc -o main.out main.swift  编译成可执行文件</li>
+<li>Swift Abstract Syntax Tree(AST)  swiftc main.swift -dump-ast 生成抽象语法树</li>
+<li>Swift Intermediate Language(SIL) swiftc main.swift -emit-sil  生成swift中间语言</li>
+<li>LLVM Intermediate Representation(LLVM IR) swiftc main.swift -emit-ir  生成LLVM中间表示层数据</li>
+<li>Assembly Language swiftc main.swift -emit-assembly 生成汇编语言</li>
+</ul>
 
         </div>
         
