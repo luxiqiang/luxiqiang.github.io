@@ -7,18 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>luxq blog</title>
+<title>Swift编译过程 - luxq blog</title>
 
 
-    <meta name="description" content="Stay hungry, stay foolish">
+    <meta name="description" content="不积跬步无以至千里">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="luxq blog">
-<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift编译过程">
+<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2019&#x2F;12&#x2F;12&#x2F;Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="luxq blog">
-<meta property="og:description" content="Stay hungry, stay foolish">
+<meta property="og:description" content="不积跬步无以至千里">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2019-12-12T08:33:34.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -78,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="luxq blog" height="28">
+                <img src="/images/logo.svg" alt="Swift编译过程" height="28">
             
             </a>
         </div>
@@ -86,7 +87,7 @@
             
             <div class="navbar-start">
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/">主页</a>
                 
                 <a class="navbar-item"
@@ -128,7 +129,6 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-    
 <div class="card">
     
     <div class="card-content article ">
@@ -150,7 +150,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/12/12/Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/">Swift编译过程</a>
+                Swift编译过程
             
         </h1>
         <div class="content">
@@ -171,129 +171,55 @@
 
 
 
-
-
-
-
-
-    
 <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-11T02:23:24.000Z">2019-12-11</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 198 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
             
-                <a class="has-link-black-ter" href="/2019/12/11/mysql%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%88%E5%86%85%E9%83%A8%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0%EF%BC%89/">mysql性能优化（内部培训笔记）</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="mysql性能优化方案"><a href="#mysql性能优化方案" class="headerlink" title="mysql性能优化方案"></a>mysql性能优化方案</h2><h3 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h3><p>InnoDB：事务安全、行级锁定、主键索引、支持外键（5.7版本的默认存储引擎，推荐）</p>
-<p>CSV：表格</p>
-<p>Archive：日志系统、历史数据、大量的设备数据采集</p>
-<p>Memory：redis，查找热度比较高的数据</p>
-<p>MyISAM:5.5以前的默认版本</p>
-<p>Federated:分布式、远程获取数据（远程表）</p>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>排序，随机io变有序io</p>
-<p>适合大中型表</p>
-<p>MySQL中使用的是B+Tree：所有数据存在叶子节点，左闭合</p>
-<p>优化建议：索引列的数据长度能少则少；不一定越多越好；覆盖索引，少用select *；列的离散性要好</p>
-<p>explain  执行计划</p>
-<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3>
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
         </div>
-        
-        
-        
     </div>
 </div>
 
 
 
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-02T03:41:08.082Z">2019-12-02</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 358 个字)
-                </span>
-                
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/11/mysql%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%88%E5%86%85%E9%83%A8%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0%EF%BC%89/">
+                <span class="level-item">mysql性能优化（内部培训笔记）</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/12/02/%E5%BC%80%E7%AF%87/">开篇</a>
-            
-        </h1>
-        <div class="content">
-            <img src="/2019/12/02/%E5%BC%80%E7%AF%87/%E5%BC%80%E7%AF%87.png" class title="This is an example image">
-
-<blockquote>
-<p>长风破浪会有时，只怪云帆济沧海</p>
-</blockquote>
-<h2 id="自己"><a href="#自己" class="headerlink" title="自己"></a>自己</h2><p>本人卢希强，别名小希，28岁，居住在武汉，一个2015年毕业的软件开发工程师，四年多时间沉心工作，职业搬砖，知识零碎，回头皆空。兴趣爱好广泛，一切运动、唱歌、游戏……无奈时间不允许。回归近三十年人生路，波澜不惊，平平淡淡，车房都有，即将结婚。特开博客记录生活工作点滴。</p>
-<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><blockquote>
-<p>不求大富大贵，但求平安风顺</p>
-</blockquote>
-<p>结婚在即，奔三冲刺，平平安安才是真。</p>
-<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><blockquote>
-<p>Stay hungry, stay foolish</p>
-</blockquote>
-<p>专职于iOS开发，四年半开发经验，工作之余接触关于web端的相关知识。感觉技术日新月异，不往前便落后，所以坚持学习、坚持笔记、坚持coding吧。</p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><blockquote>
-<p>先定个小目标，赚他个一个亿？</p>
-</blockquote>
-<p>1、学习flutter,copy一个完整的公司项目；</p>
-<p>2、减肥30斤；</p>
-<p>3、学习SwiftUI、vue等；</p>
-<p>4、每月一本书；</p>
-<p>5、赚钱赚钱。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><blockquote>
-<p>会当凌绝顶，一览众山喜爱</p>
-</blockquote>
-<p>祝自己工作顺利，升职加薪，生活幸福，股市长虹！</p>
-<p>2020为了生活，冲鸭！</p>
-
-        </div>
-        
-        
         
     </div>
 </div>
-
-
-
-
-
-
 
 
 </div>
@@ -662,7 +588,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="luxq blog" height="28">
+                    <img src="/images/logo.svg" alt="Swift编译过程" height="28">
                 
                 </a>
                 <p class="is-size-7">
