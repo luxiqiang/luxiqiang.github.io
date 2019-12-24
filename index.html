@@ -135,6 +135,91 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-24T08:57:00.000Z">2019-12-24</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 396 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/12/24/%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF/">舒适终端</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="iTerm2-Oh-My-Zsh自定义终端（Mac）"><a href="#iTerm2-Oh-My-Zsh自定义终端（Mac）" class="headerlink" title="iTerm2 + Oh My Zsh自定义终端（Mac）"></a>iTerm2 + Oh My Zsh自定义终端（Mac）</h1>
+
+<blockquote>
+<p>homebrew、Xcode、git、iterm2、zsh</p>
+</blockquote>
+<h2 id="Step1-下载iTerm2"><a href="#Step1-下载iTerm2" class="headerlink" title="Step1  下载iTerm2"></a>Step1  下载iTerm2</h2><p>下载地址：<a href="https://www.iterm2.com/" target="_blank" rel="noopener">https://www.iterm2.com/</a></p>
+<p>老版本MacOS需手动切换zsh，执行以下命令</p>
+<figure class="highlight awk hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">cash -s <span class="hljs-regexp">/bin/</span>zsh</span></pre></td></tr></table></figure>
+
+<p>如果想切回bash，执行以下命令</p>
+<figure class="highlight awk hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">cash -s <span class="hljs-regexp">/bin/</span>bash</span></pre></td></tr></table></figure>
+
+<h2 id="Step2-安装Oh-My-Zsh"><a href="#Step2-安装Oh-My-Zsh" class="headerlink" title="Step2 安装Oh My Zsh"></a>Step2 安装Oh My Zsh</h2><p>curl安装</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># curl 安装方式</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sh -c <span class="hljs-string">"<span class="hljs-variable">$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span></span></pre></td></tr></table></figure>
+
+<p>wget安装</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># wget 安装方式</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sh -c <span class="hljs-string">"<span class="hljs-variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span></span></pre></td></tr></table></figure>
+
+<p>地址：<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh</a></p>
+<h2 id="Step3-安装PowerLine"><a href="#Step3-安装PowerLine" class="headerlink" title="Step3 安装PowerLine"></a>Step3 安装PowerLine</h2><p>首先安装pip，已经安装的跳过</p>
+<figure class="highlight nginx hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-attribute">sudo</span> easy_install pip</span></pre></td></tr></table></figure>
+
+<p>安装powerline</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">pip <span class="hljs-keyword">install</span> powerline-<span class="hljs-keyword">status</span> <span class="hljs-comment">--user</span></span></pre></td></tr></table></figure>
+
+<h2 id="Step3-选择字体和配色"><a href="#Step3-选择字体和配色" class="headerlink" title="Step3 选择字体和配色"></a>Step3 选择字体和配色</h2><p>iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Text自行选择</p>
+<h2 id="Step4-选择主题"><a href="#Step4-选择主题" class="headerlink" title="Step4 选择主题"></a>Step4 选择主题</h2><p>下载agnoster主题</p>
+<figure class="highlight jboss-cli hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">cd</span> ~<span class="hljs-string">/Desktop/OpenSource</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">git clone https:<span class="hljs-string">//github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">cd</span> oh-my-zsh-agnoster-fcamblor/</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-string">./install</span></span></pre></td></tr></table></figure>
+
+<p>打开zshrc配置文件，将ZSH_THEME后面的字段改为”agnoster”</p>
+<figure class="highlight jboss-cli hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">oepn ~<span class="hljs-string">/.zshrc</span></span></pre></td></tr></table></figure>
+
+<p>修改完成后，执行配置</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">source</span> ~/.zshrc</span></pre></td></tr></table></figure>
+
+<h2 id="Step5-安装高亮插件"><a href="#Step5-安装高亮插件" class="headerlink" title="Step5 安装高亮插件"></a>Step5 安装高亮插件</h2><figure class="highlight vim hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">cd</span> ~/.oh-my-zsh/custom/plugins/</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/zsh-users/zsh-<span class="hljs-keyword">syntax</span>-highlighting.git</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">open</span> ~/.zshrc</span></pre></td></tr></table></figure>
+
+<p>这时我们再次打开zshrc文件进行编辑。找到plugins，此时plugins中应该已经有了git，我们需要把高亮插件也加上：</p>
+<p>请务必保证插件顺序，zsh-syntax-highlighting必须在最后一个。</p>
+<p>然后在文件的最后一行添加：source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</p>
+<p>执行命令使刚才的修改生效：</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">source</span> ~/.zshrc</span></pre></td></tr></table></figure>
+
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>愉快的去使用吧！</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-12-12T07:47:57.000Z">2019-12-12</time>
                 
                 
@@ -354,7 +439,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        4
                     </p>
                 </div>
             </div>
@@ -455,6 +540,25 @@
         
         <article class="media">
             
+            <a href="/2019/12/24/%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="舒适终端">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-24T08:57:00.000Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF/" class="title has-link-black-ter is-size-6 has-text-weight-normal">舒适终端</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/12/Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Swift编译过程">
@@ -527,7 +631,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -569,6 +673,25 @@
         
         <article class="media">
             
+            <a href="/2019/12/24/%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="舒适终端">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-24T08:57:00.000Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF/" class="title has-link-black-ter is-size-6 has-text-weight-normal">舒适终端</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/12/Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Swift编译过程">
@@ -641,7 +764,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
