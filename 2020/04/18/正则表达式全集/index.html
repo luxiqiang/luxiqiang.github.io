@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>面向对象的一些事 - luxq blog</title>
+<title>正则表达式全集 - luxq blog</title>
 
 
-    <meta name="description" content="由来　　很久以前，软件开发的世界还是一片浑浑噩噩，不管开发什么软件都面临着复杂性这个问题，代码里面到处是goto语句，程序的流程随意跳转。众生写代码时，越写到后面越不知道自己写的是什么。这时候出现一位巨人，他就是结构化编程。 　　结构化编程的基本思想是：有序地控制流程，即把程序的执行顺序限制为顺序、分支和循环这三种；把共通的处理归结为例程（函数）。 　　虽然结构化解决了程序控制流的复杂问题，但程序">
+    <meta name="description" content="字符 描述    \ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“n”匹配字符“n”。“\n”匹配一个换行符。串行“\\”匹配“\”而“\(”则匹配“(”。   ^ 匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配“\n”或“\r”之后的位置。   $ 匹配输入字符串的结束位置。如果设置了RegExp对象的">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面向对象的一些事">
-<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2020&#x2F;04&#x2F;08&#x2F;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B&#x2F;index.html">
+<meta property="og:title" content="正则表达式全集">
+<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2020&#x2F;04&#x2F;18&#x2F;%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A8%E9%9B%86&#x2F;index.html">
 <meta property="og:site_name" content="luxq blog">
-<meta property="og:description" content="由来　　很久以前，软件开发的世界还是一片浑浑噩噩，不管开发什么软件都面临着复杂性这个问题，代码里面到处是goto语句，程序的流程随意跳转。众生写代码时，越写到后面越不知道自己写的是什么。这时候出现一位巨人，他就是结构化编程。 　　结构化编程的基本思想是：有序地控制流程，即把程序的执行顺序限制为顺序、分支和循环这三种；把共通的处理归结为例程（函数）。 　　虽然结构化解决了程序控制流的复杂问题，但程序">
+<meta property="og:description" content="字符 描述    \ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“n”匹配字符“n”。“\n”匹配一个换行符。串行“\\”匹配“\”而“\(”则匹配“(”。   ^ 匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配“\n”或“\r”之后的位置。   $ 匹配输入字符串的结束位置。如果设置了RegExp对象的">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-04-08T02:38:29.173Z">
+<meta property="og:updated_time" content="2020-04-18T15:18:23.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="面向对象的一些事" height="28">
+                <img src="/images/logo.svg" alt="正则表达式全集" height="28">
             
             </a>
         </div>
@@ -135,13 +135,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-08T02:31:53.000Z">2020-04-08</time>
+                <time class="level-item has-text-grey" datetime="2020-04-18T15:18:01.000Z">2020-04-18</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    12 分钟 读完 (大约 1759 个字)
+                    15 分钟 读完 (大约 2295 个字)
                 </span>
                 
                 
@@ -150,28 +150,226 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                面向对象的一些事
+                正则表达式全集
             
         </h1>
         <div class="content">
-            <h4 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h4><p>　　很久以前，软件开发的世界还是一片浑浑噩噩，不管开发什么软件都面临着复杂性这个问题，代码里面到处是goto语句，程序的流程随意跳转。众生写代码时，越写到后面越不知道自己写的是什么。这时候出现一位巨人，他就是结构化编程。</p>
-<p>　　结构化编程的基本思想是：有序地控制流程，即把程序的执行顺序限制为顺序、分支和循环这三种；把共通的处理归结为例程（函数）。</p>
-<p>　　虽然结构化解决了程序控制流的复杂问题，但程序里面不仅包括控制结构，还包括要处理的数据。随着处理数据的增加，程序的复杂性也会上升。这时候，面向对象编程来了！</p>
-<h4 id="Simula"><a href="#Simula" class="headerlink" title="Simula"></a>Simula</h4><p>　　面向对象技术最早是在编程语言Simula中提出的。1967年5月20日，在挪威奥斯陆郊外的小镇莉沙布举行的IFIP TC-2 工作会议上，挪威科学家Ole-Johan Dahl和Kristen Nygaard正式发布了Simula 67语言。Simula 67被认为是最早的面向对象程序设计语言，是面向对象的开山祖师，它引入了所有后来面向对象程序设计语言所遵循的基础概念：对象、类、继承，但它的实现并不是很完整。</p>
-<p>　　Simula虽然最早提出面向对象的概念，但因为其本身复杂，比较难学，而并没有大规模流行。但Simula提出的面向对象的概念对程序语言后继的发展产生了巨大和深远的影响。</p>
-<h4 id="Smalltalk"><a href="#Smalltalk" class="headerlink" title="Smalltalk"></a>Smalltalk</h4><p>　　Smalltalk是公认为历史上第二个面向对象的程序语言，而且是第一个完整实现了面向对象技术的语言。</p>
-<p>　　最早的Smalltalk原型由艾伦·凯于70年代初提出。类（来自Simula-67）、海龟绘图（来自MIT的LOGO）以及图形界面等概念的有机组合，构成了Smalltalk的最初的蓝图。在1971年到1975年之间，艾伦·凯在Xerox PARC的小组设计并实现了第一个真正的Smalltalk语言系统。</p>
-<p>　　Smalltalk引领了面向对象的设计思想的思潮，对其它众多的程序设计语言的产生起到了极大的推动作用。C++，C#，Objective-C，Actor，Java和Ruby等，无一不受到Smalltalk的影响，这些程序语言中也随处可见Smalltalk的影子。</p>
-<p>　　 除了编程语言受到Smalltalk的影响外，90年代的许多软件开发思想得利于Smalltalk，例如设计模式、敏捷编程和代码重构等。</p>
-<h4 id="面向对象与基于对象的区别"><a href="#面向对象与基于对象的区别" class="headerlink" title="面向对象与基于对象的区别"></a>面向对象与基于对象的区别</h4><p>　　 “面向对象”和“基于对象”两个不同的概念。面向对象的三大特点（封装，继承，多态）缺一不可，通常“基于对象”使用对象，但是无法利用现有的对象模板产生新的对象类型，继而产生新的对象，也就是说“基于对象”没有继承的特点，而“多态”是表示为父类类型的子类对象实例，没有了继承的概念也就无从谈论“多态”。现在的很多流行技术都是基于对象的，它们使用一些封装好的对象，调用对象的方法，设置对象的属性。但是它们无法让程序员派生新对象类型。他们只能使用现有对象的方法和属性。所以当你判断一个新的技术是否是面向对象的时候，通常可以使用后两个特性来加以判断。</p>
-<h4 id="面向对象的三个基本特征"><a href="#面向对象的三个基本特征" class="headerlink" title="面向对象的三个基本特征"></a>面向对象的三个基本特征</h4><h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><p>　　 继承是指这样一种能力：它可以使用现有类的所有功能，并在无需重新编写原来的类的情况下对这些功能进行扩展。通过继承创建的新类称为“子类”或“派生类”，被继承的类称为“基类”、“父类”或“超类”。继承的过程，就是从一般到特殊的过程。要实现继承，可以通过“继承”（Inheritance）和“组合”（Composition）来实现。继承概念的实现方式有二类：实现继承与接口继承。</p>
-<ul>
-<li>实现继承是指直接使用基类的属性和方法而无需额外编码的能力；</li>
-<li>接口继承是指仅使用属性和方法的名称、但是子类必须提供实现的能力。</li>
-</ul>
-<h5 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h5><p>　　多态即一个名字有多种语义，一个词法元素可以作多种解释。面向对象系统，对象封装了操作，利用重名的操作，让各对象自己去释意执行，这种多义性不会带来混淆，方便与高层设计。虽然针对不同对象的具体操作不同，但通过一个公共的类，它们（那些操作）可以通过相同的方式予以调用。最常见的多态就是将子类传入父类参数中，运行时调用父类方法时通过传入的子类决定具体的内部结构或行为。</p>
-<h5 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h5><p>　　面向对象的诸多优点是靠封装手段得到“对象”而获得的。封装的目的在于将对象用户和对象的实现者分开，用户不必知道对象行为实现的细节，只要以实现者提供的消息来访问该对象。封装是面向对象的特征之一，是对象和类概念的主要特性。简单的说，一个类就是一个封装了数据以及操作这些数据的代码的逻辑实体。在一个对象内部，某些代码或某些数据可以是私有的，不能被外界访问。通过这种方式，对象对内部数据提供了不同级别的保护，以防止程序中无关的部分意外的改变或错误的使用了对象的私有部分。</p>
-<h4 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h4><p>1、抽象会使复杂的问题更加简单化。<br>2、从以前面向过程的执行者，变成了张张嘴的指挥者。<br>3、面向对象更符合人类的思维，面向过程则是机器的思想</p>
+            <table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\</td>
+<td align="center">将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“<code>n</code>”匹配字符“<code>n</code>”。“<code>\n</code>”匹配一个换行符。串行“<code>\\</code>”匹配“<code>\</code>”而“<code>\(</code>”则匹配“<code>(</code>”。</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配“<code>\n</code>”或“<code>\r</code>”之后的位置。</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="center">匹配输入字符串的结束位置。如果设置了RegExp对象的Multiline属性，$也匹配“<code>\n</code>”或“<code>\r</code>”之前的位置。</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">匹配前面的子表达式零次或多次。例如，zo<em>能匹配“<code>z</code>”以及“<code>zoo</code>”。</em>等价于{0,}。</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">匹配前面的子表达式一次或多次。例如，“<code>zo+</code>”能匹配“<code>zo</code>”以及“<code>zoo</code>”，但不能匹配“<code>z</code>”。+等价于{1,}。</td>
+</tr>
+<tr>
+<td align="center">?</td>
+<td align="center">匹配前面的子表达式零次或一次。例如，“<code>do(es)?</code>”可以匹配“<code>does</code>”或“<code>does</code>”中的“<code>do</code>”。?等价于{0,1}。</td>
+</tr>
+<tr>
+<td align="center">{<em>n</em>}</td>
+<td align="center"><em>n</em>是一个非负整数。匹配确定的<em>n</em>次。例如，“<code>o{2}</code>”不能匹配“<code>Bob</code>”中的“<code>o</code>”，但是能匹配“<code>food</code>”中的两个o。</td>
+</tr>
+<tr>
+<td align="center">{<em>n</em>,}</td>
+<td align="center"><em>n</em>是一个非负整数。至少匹配<em>n</em>次。例如，“<code>o{2,}</code>”不能匹配“<code>Bob</code>”中的“<code>o</code>”，但能匹配“<code>foooood</code>”中的所有o。“<code>o{1,}</code>”等价于“<code>o+</code>”。“<code>o{0,}</code>”则等价于“<code>o*</code>”。</td>
+</tr>
+<tr>
+<td align="center">{<em>n</em>,<em>m</em>}</td>
+<td align="center"><em>m</em>和<em>n</em>均为非负整数，其中<em>n</em>&lt;=<em>m</em>。最少匹配<em>n</em>次且最多匹配<em>m</em>次。例如，“<code>o{1,3}</code>”将匹配“<code>fooooood</code>”中的前三个o。“<code>o{0,1}</code>”等价于“<code>o?</code>”。请注意在逗号和两个数之间不能有空格。</td>
+</tr>
+<tr>
+<td align="center">?</td>
+<td align="center">当该字符紧跟在任何一个其他限制符（<em>,+,?，{*n</em>}，{<em>n</em>,}，{<em>n</em>,<em>m</em>}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串“<code>oooo</code>”，“<code>o+?</code>”将匹配单个“<code>o</code>”，而“<code>o+</code>”将匹配所有“<code>o</code>”。</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center">匹配除“<code>\</code><em><code>n</code></em>”之外的任何单个字符。要匹配包括“<code>\</code><em><code>n</code></em>”在内的任何字符，请使用像“`(.</td>
+</tr>
+<tr>
+<td align="center">(pattern)</td>
+<td align="center">匹配pattern并获取这一匹配。所获取的匹配可以从产生的Matches集合得到，在VBScript中使用SubMatches集合，在JScript中则使用$0…$9属性。要匹配圆括号字符，请使用“<code>\(</code>”或“<code>\)</code>”。</td>
+</tr>
+<tr>
+<td align="center">(?:pattern)</td>
+<td align="center">匹配pattern但不获取匹配结果，也就是说这是一个非获取匹配，不进行存储供以后使用。这在使用或字符“`(</td>
+</tr>
+<tr>
+<td align="center">(?=pattern)</td>
+<td align="center">正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如，“`Windows(?=95</td>
+</tr>
+<tr>
+<td align="center">(?!pattern)</td>
+<td align="center">正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如“`Windows(?!95</td>
+</tr>
+<tr>
+<td align="center">(?&lt;=pattern)</td>
+<td align="center">反向肯定预查，与正向肯定预查类拟，只是方向相反。例如，“`(?&lt;=95</td>
+</tr>
+<tr>
+<td align="center">(?&lt;!pattern)</td>
+<td align="center">反向否定预查，与正向否定预查类拟，只是方向相反。例如“<code>(?”能匹配“</code>3.1Windows<code>”中的“</code>Windows<code>”，但不能匹配“</code>2000Windows<code>”中的“</code>Windows`”。</td>
+</tr>
+<tr>
+<td align="center">x|y</td>
+<td align="center">匹配x或y。例如，“`z</td>
+</tr>
+<tr>
+<td align="center">[xyz]</td>
+<td align="center">字符集合。匹配所包含的任意一个字符。例如，“<code>[abc]</code>”可以匹配“<code>plain</code>”中的“<code>a</code>”。</td>
+</tr>
+<tr>
+<td align="center">[^xyz]</td>
+<td align="center">负值字符集合。匹配未包含的任意字符。例如，“<code>[^abc]</code>”可以匹配“<code>plain</code>”中的“<code>p</code>”。</td>
+</tr>
+<tr>
+<td align="center">[a-z]</td>
+<td align="center">字符范围。匹配指定范围内的任意字符。例如，“<code>[a-z]</code>”可以匹配“<code>a</code>”到“<code>z</code>”范围内的任意小写字母字符。</td>
+</tr>
+<tr>
+<td align="center">[^a-z]</td>
+<td align="center">负值字符范围。匹配任何不在指定范围内的任意字符。例如，“<code>[^a-z]</code>”可以匹配任何不在“<code>a</code>”到“<code>z</code>”范围内的任意字符。</td>
+</tr>
+<tr>
+<td align="center">\b</td>
+<td align="center">匹配一个单词边界，也就是指单词和空格间的位置。例如，“<code>er\b</code>”可以匹配“<code>never</code>”中的“<code>er</code>”，但不能匹配“<code>verb</code>”中的“<code>er</code>”。</td>
+</tr>
+<tr>
+<td align="center">\B</td>
+<td align="center">匹配非单词边界。“<code>er\B</code>”能匹配“<code>verb</code>”中的“<code>er</code>”，但不能匹配“<code>never</code>”中的“<code>er</code>”。</td>
+</tr>
+<tr>
+<td align="center">\cx</td>
+<td align="center">匹配由x指明的控制字符。例如，\cM匹配一个Control-M或回车符。x的值必须为A-Z或a-z之一。否则，将c视为一个原义的“<code>c</code>”字符。</td>
+</tr>
+<tr>
+<td align="center">\d</td>
+<td align="center">匹配一个数字字符。等价于[0-9]。</td>
+</tr>
+<tr>
+<td align="center">\D</td>
+<td align="center">匹配一个非数字字符。等价于[^0-9]。</td>
+</tr>
+<tr>
+<td align="center">\f</td>
+<td align="center">匹配一个换页符。等价于\x0c和\cL。</td>
+</tr>
+<tr>
+<td align="center">\n</td>
+<td align="center">匹配一个换行符。等价于\x0a和\cJ。</td>
+</tr>
+<tr>
+<td align="center">\r</td>
+<td align="center">匹配一个回车符。等价于\x0d和\cM。</td>
+</tr>
+<tr>
+<td align="center">\s</td>
+<td align="center">匹配任何空白字符，包括空格、制表符、换页符等等。等价于[ \f\n\r\t\v]。</td>
+</tr>
+<tr>
+<td align="center">\S</td>
+<td align="center">匹配任何非空白字符。等价于[^ \f\n\r\t\v]。</td>
+</tr>
+<tr>
+<td align="center">\t</td>
+<td align="center">匹配一个制表符。等价于\x09和\cI。</td>
+</tr>
+<tr>
+<td align="center">\v</td>
+<td align="center">匹配一个垂直制表符。等价于\x0b和\cK。</td>
+</tr>
+<tr>
+<td align="center">\w</td>
+<td align="center">匹配包括下划线的任何单词字符。等价于“<code>[A-Za-z0-9_]</code>”。</td>
+</tr>
+<tr>
+<td align="center">\W</td>
+<td align="center">匹配任何非单词字符。等价于“<code>[^A-Za-z0-9_]</code>”。</td>
+</tr>
+<tr>
+<td align="center">\x<em>n</em></td>
+<td align="center">匹配<em>n</em>，其中<em>n</em>为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，“<code>\x41</code>”匹配“<code>A</code>”。“<code>\x041</code>”则等价于“<code>\x04&amp;1</code>”。正则表达式中可以使用ASCII编码。.</td>
+</tr>
+<tr>
+<td align="center">*num*</td>
+<td align="center">匹配<em>num</em>，其中<em>num</em>是一个正整数。对所获取的匹配的引用。例如，“<code>(.)\1</code>”匹配两个连续的相同字符。</td>
+</tr>
+<tr>
+<td align="center">*n*</td>
+<td align="center">标识一个八进制转义值或一个向后引用。如果*n<em>之前至少</em>n<em>个获取的子表达式，则</em>n<em>为向后引用。否则，如果</em>n<em>为八进制数字（0-7），则</em>n*为一个八进制转义值。</td>
+</tr>
+<tr>
+<td align="center">*nm*</td>
+<td align="center">标识一个八进制转义值或一个向后引用。如果*nm<em>之前至少有</em>nm<em>个获得子表达式，则</em>nm<em>为向后引用。如果\</em>nm<em>之前至少有</em>n<em>个获取，则</em>n<em>为一个后跟文字</em>m<em>的向后引用。如果前面的条件都不满足，若</em>n<em>和</em>m<em>均为八进制数字（0-7），则\</em>nm<em>将匹配八进制转义值</em>nm*。</td>
+</tr>
+<tr>
+<td align="center">*nml*</td>
+<td align="center">如果<em>n</em>为八进制数字（0-3），且<em>m和l</em>均为八进制数字（0-7），则匹配八进制转义值<em>nm</em>l。</td>
+</tr>
+<tr>
+<td align="center">\u<em>n</em></td>
+<td align="center">匹配<em>n</em>，其中<em>n</em>是一个用四个十六进制数字表示的Unicode字符。例如，\u00A9匹配版权符号（©）。</td>
+</tr>
+</tbody></table>
+<h2 id="常用正则表达式"><a href="#常用正则表达式" class="headerlink" title="常用正则表达式"></a>常用正则表达式</h2><table>
+<thead>
+<tr>
+<th align="center">用户名</th>
+<th>/^[a-z0-9_-]{3,16}$/</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">密码</td>
+<td>/^[a-z0-9_-]{6,18}$/</td>
+</tr>
+<tr>
+<td align="center">十六进制值</td>
+<td>/^#?([a-f0-9]{6}|[a-f0-9]{3})$/</td>
+</tr>
+<tr>
+<td align="center">电子邮箱</td>
+<td>/^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/ /^[a-z\d]+(.[a-z\d]+)*@(<a href="-[\da-z]">\da-z</a>?)+(.{1,2}[a-z]+)+$/</td>
+</tr>
+<tr>
+<td align="center">URL</td>
+<td>/^(https?://)?([\da-z.-]+).([a-z.]{2,6})([/\w .-]<em>)</em>/?$/</td>
+</tr>
+<tr>
+<td align="center">IP 地址</td>
+<td>/((2[0-4]\d|25[0-5]|[01]?\d\d?).){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)/ /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/</td>
+</tr>
+<tr>
+<td align="center">HTML 标签</td>
+<td>/^&lt;([a-z]+)([^&lt;]+)<em>(?:&gt;(.</em>)&lt;/\1&gt;|\s+/&gt;)$/</td>
+</tr>
+<tr>
+<td align="center">删除代码\注释</td>
+<td>(?&lt;!http:|\S)//.*$</td>
+</tr>
+<tr>
+<td align="center">Unicode编码中的汉字范围</td>
+<td>/^[\u2E80-\u9FFF]+$/</td>
+</tr>
+</tbody></table>
 
         </div>
         
@@ -221,17 +419,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/04/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A8%E9%9B%86/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">正则表达式全集</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/24/%E8%88%92%E9%80%82%E7%BB%88%E7%AB%AF/">
-                <span class="level-item">舒适终端</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/04/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/">
+                <span class="level-item">面向对象的一些事</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -704,7 +895,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="面向对象的一些事" height="28">
+                    <img src="/images/logo.svg" alt="正则表达式全集" height="28">
                 
                 </a>
                 <p class="is-size-7">
