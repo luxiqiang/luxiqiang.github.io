@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>mysql性能优化（内部培训笔记） - luxq blog</title>
+<title>bpmn流程模式 - luxq blog</title>
 
 
-    <meta name="description" content="mysql性能优化方案存储引擎InnoDB：事务安全、行级锁定、主键索引、支持外键（5.7版本的默认存储引擎，推荐） CSV：表格 Archive：日志系统、历史数据、大量的设备数据采集 Memory：redis，查找热度比较高的数据 MyISAM:5.5以前的默认版本 Federated:分布式、远程获取数据（远程表） 索引排序，随机io变有序io 适合大中型表 MySQL中使用的是B+Tree">
+    <meta name="description" content="BPM常见的流程模式有：顺序流程、会签流程、或签流程、分支流程、并行流程、子流程、任意流程等，这些流程模式均在BPMN2.0规范中有明确的定义，activiti、flowable、camunda等开源工作流引擎也都支持这些模式，以下重点介绍会签流程、或签流程、分支流程、并行流程这四种流程模式。 一、会签流程1、适用场景会签是一种联合审批的特殊审批节点，可理解为一种多人投票机制，一个任务需要多个人同">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql性能优化（内部培训笔记）">
-<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;mysql%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%88%E5%86%85%E9%83%A8%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0%EF%BC%89&#x2F;index.html">
+<meta property="og:title" content="bpmn流程模式">
+<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2021&#x2F;09&#x2F;18&#x2F;bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F&#x2F;index.html">
 <meta property="og:site_name" content="luxq blog">
-<meta property="og:description" content="mysql性能优化方案存储引擎InnoDB：事务安全、行级锁定、主键索引、支持外键（5.7版本的默认存储引擎，推荐） CSV：表格 Archive：日志系统、历史数据、大量的设备数据采集 Memory：redis，查找热度比较高的数据 MyISAM:5.5以前的默认版本 Federated:分布式、远程获取数据（远程表） 索引排序，随机io变有序io 适合大中型表 MySQL中使用的是B+Tree">
+<meta property="og:description" content="BPM常见的流程模式有：顺序流程、会签流程、或签流程、分支流程、并行流程、子流程、任意流程等，这些流程模式均在BPMN2.0规范中有明确的定义，activiti、flowable、camunda等开源工作流引擎也都支持这些模式，以下重点介绍会签流程、或签流程、分支流程、并行流程这四种流程模式。 一、会签流程1、适用场景会签是一种联合审批的特殊审批节点，可理解为一种多人投票机制，一个任务需要多个人同">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-11T02:24:36.744Z">
+<meta property="og:updated_time" content="2021-09-18T09:12:39.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="mysql性能优化（内部培训笔记）" height="28">
+                <img src="/images/logo.svg" alt="bpmn流程模式" height="28">
             
             </a>
         </div>
@@ -135,13 +135,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-11T02:23:24.000Z">2019-12-11</time>
+                <time class="level-item has-text-grey" datetime="2021-09-18T09:12:12.000Z">2021-09-18</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 198 个字)
+                    13 分钟 读完 (大约 1947 个字)
                 </span>
                 
                 
@@ -150,22 +150,32 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                mysql性能优化（内部培训笔记）
+                bpmn流程模式
             
         </h1>
         <div class="content">
-            <h2 id="mysql性能优化方案"><a href="#mysql性能优化方案" class="headerlink" title="mysql性能优化方案"></a>mysql性能优化方案</h2><h3 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h3><p>InnoDB：事务安全、行级锁定、主键索引、支持外键（5.7版本的默认存储引擎，推荐）</p>
-<p>CSV：表格</p>
-<p>Archive：日志系统、历史数据、大量的设备数据采集</p>
-<p>Memory：redis，查找热度比较高的数据</p>
-<p>MyISAM:5.5以前的默认版本</p>
-<p>Federated:分布式、远程获取数据（远程表）</p>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>排序，随机io变有序io</p>
-<p>适合大中型表</p>
-<p>MySQL中使用的是B+Tree：所有数据存在叶子节点，左闭合</p>
-<p>优化建议：索引列的数据长度能少则少；不一定越多越好；覆盖索引，少用select *；列的离散性要好</p>
-<p>explain  执行计划</p>
-<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3>
+            <p>BPM常见的流程模式有：顺序流程、会签流程、或签流程、分支流程、并行流程、子流程、任意流程等，这些流程模式均在BPMN2.0规范中有明确的定义，activiti、flowable、camunda等开源工作流引擎也都支持这些模式，以下重点介绍会签流程、或签流程、分支流程、并行流程这四种流程模式。</p>
+<p>一、会签流程<br>1、适用场景<br>会签是一种联合审批的特殊审批节点，可理解为一种多人投票机制，一个任务需要多个人同时处理，然后汇总多个人的意见，决定流程下一步该如何执行。流程设计时，若会签审批节点中设置多个参与人，流程运行时，会签节点任务需要多人共同处理，然后汇总多人的处理意见，决定会签节点的处理结果。<br>例如：员工发起采购申请，需经过多名领导共同审批后，才决定是否可以采购，只要其中1名领导不同意，便退回申请人。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210415232105746.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejI1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>2、具体规则<br>会签分并行会签和顺序会签两种：<br>并行会签：指同一个审批节点设置多个人，如ABC三人，三人会同时收到待办，需全部同意之后，审批才可到下一审批节点。<br>顺序会签：指同一个审批节点设置多个人，如ABC三人，三人按顺序依次收到待办，即A先审批，A提交后B才能审批，需全部同意之后，审批才可到下一审批节点。</p>
+<p>3、设置方法<br>BPMN2.0规范中提供了bpmn:multiInstanceLoopCharacteristics多实例循环的模型定义，activiti、flowable、camunda等开源工作流引擎均支持该属性，云程BPM基于camunda实现，对bpmn:multiInstanceLoopCharacteristics进行了封装，提供了界面可视化配置功能，并支持多人并行会签和多人顺序会签的功能，顺序会签在一些特定的业务场景下是有用的，个别中国特色流程需求有审批顺序的要求。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210415232131424.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejI1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>二、或签流程<br>1、适用场景<br>一个流程审批节点里有多个处理人，任意一个人处理后就能进入下一个节点。<br>例如：员工发起采购申请，提交给多名领导审批，只要有一名领导同意即可提交到下一节点。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210415232309212.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejI1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>2、具体规则<br>指同一个审批节点设置多个人，如ABC三人，三人会同时收到审批待办，只要其中任意一人审批即可到下一审批节点。</p>
+<p>3、设置方法<br>BPMN2.0规范中提供了bpmn:multiInstanceLoopCharacteristics多实例循环的模型定义，并通过bpmn:completionCondition标签定义多实例完成条件，activiti、flowable、camunda等开源工作流引擎均支持该属性，云程BPM基于camunda实现，对bpmn:multiInstanceLoopCharacteristics和bpmn:completionCondition进行了封装，提供了界面可视化配置功能，配置多人办理规则为“多人任意”即可实现该功能。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021041523233911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejI1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>三、分支流程<br>1、适用场景<br>分支流程的适用场景：流程中某个节点后有多个分支节点，根据不同条件执行不同的分支，即不同的数据会走不同的流程路径。<br>例如：请假申请，可根据请假天数走不同的审批路径，3天以内请假由人力资源审批，超过3天的请假由公司领导审批。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210415232404880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejI1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>2、具体规则<br>1、分支流程使用【排他网关】，连接在【排他网关】后面的线条，有分流作用，点击线条可设置流转条件；<br>2、上一节点点击【提交】后，根据【排他网关】设置按顺序判断所有分支流转条件，出现满足流转条件时，就进入相应的分支节点。<br>3、如果不设置，表示无条件限制，会直接进入该节点；如果设置了流转条件，则只有满足条件才会进入该节点；如果所有的条件都不满足，则会流转到设置的默认方向；如果有多个条件满足，则会按设置的条件顺序判断，直到出现第一个满足的条件，就进入该节点。</p>
+<p>3、设置方法<br>BPMN2.0规范中提供了bpmn:exclusiveGateway排他网关标签，activiti、flowable、camunda等开源工作流引擎均支持该标签，云程BPM基于camunda实现，严格遵照标准的BPMN2.0网关模型，并提供了界面可视化配置功能。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210415232437371.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejI1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>四、并行流程<br>1、适用场景<br>并行流程适用场景：流程中某个节点后有多个节点需要并行执行，节点的处理人需同时收到流程待办，各自处理待办，当所有分支线上的节点都执行后，流程才进入到下一个节点。<br>例如：员工提交请假申请，同时送部门经理和人力资源部审批，需要部门经理和人力资源全部审批通过后，才算流程审批通过。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210415232511851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejI1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>2、具体规则<br>1、【并行网关】必须成双使用，连接在【并行网关】后面的线条，才有并流作用；<br>2、上一节点点击【提交】后，无论线条是否设置条件，都自动进入所有的分支节点。当所有分支都执行后，才进入这些分支同时连接的下一个节点；</p>
+<p>3、设置方法<br>BPMN2.0规范中提供了bpmn:parallelGateway并行网关标签，activiti、flowable、camunda等开源工作流引擎均支持该标签，云程BPM基于camunda实现，严格遵照标准的BPMN2.0网关模型，并提供了界面可视化配置功能。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210415232536820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d4ejI1OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+
         </div>
         
         
@@ -215,16 +225,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/12/12/Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Swift编译过程</span>
+                <span class="level-item">微服务知识体系</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/02/%E5%BC%80%E7%AF%87/">
-                <span class="level-item">开篇</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/">
+                <span class="level-item">工作流设计</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -719,7 +729,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="mysql性能优化（内部培训笔记）" height="28">
+                    <img src="/images/logo.svg" alt="bpmn流程模式" height="28">
                 
                 </a>
                 <p class="is-size-7">

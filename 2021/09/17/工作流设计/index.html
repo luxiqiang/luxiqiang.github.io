@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>mysql性能优化（内部培训笔记） - luxq blog</title>
+<title>工作流设计 - luxq blog</title>
 
 
-    <meta name="description" content="mysql性能优化方案存储引擎InnoDB：事务安全、行级锁定、主键索引、支持外键（5.7版本的默认存储引擎，推荐） CSV：表格 Archive：日志系统、历史数据、大量的设备数据采集 Memory：redis，查找热度比较高的数据 MyISAM:5.5以前的默认版本 Federated:分布式、远程获取数据（远程表） 索引排序，随机io变有序io 适合大中型表 MySQL中使用的是B+Tree">
+    <meta name="description" content="7个方面总结：审批工作流设计工作流是后台系统的核心和灵魂，而审批则是工作流中的最基础的应用场景。在公司管理和运转中引入审批工作流，替代原本的纸质申请和审批，可以达到以下目标：  提高公司的运转效率 公司管理制度规范化 系统留档，便于追溯 环保  本文将从角色、内容、流程、动作、权限、配置、效率7个方面，对审批工作流的产品设计进行总结。 一. 角色 在一个公司中，每个人都会有自己的岗位职责和层级之分">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql性能优化（内部培训笔记）">
-<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;mysql%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%88%E5%86%85%E9%83%A8%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0%EF%BC%89&#x2F;index.html">
+<meta property="og:title" content="工作流设计">
+<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2021&#x2F;09&#x2F;17&#x2F;%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1&#x2F;index.html">
 <meta property="og:site_name" content="luxq blog">
-<meta property="og:description" content="mysql性能优化方案存储引擎InnoDB：事务安全、行级锁定、主键索引、支持外键（5.7版本的默认存储引擎，推荐） CSV：表格 Archive：日志系统、历史数据、大量的设备数据采集 Memory：redis，查找热度比较高的数据 MyISAM:5.5以前的默认版本 Federated:分布式、远程获取数据（远程表） 索引排序，随机io变有序io 适合大中型表 MySQL中使用的是B+Tree">
+<meta property="og:description" content="7个方面总结：审批工作流设计工作流是后台系统的核心和灵魂，而审批则是工作流中的最基础的应用场景。在公司管理和运转中引入审批工作流，替代原本的纸质申请和审批，可以达到以下目标：  提高公司的运转效率 公司管理制度规范化 系统留档，便于追溯 环保  本文将从角色、内容、流程、动作、权限、配置、效率7个方面，对审批工作流的产品设计进行总结。 一. 角色 在一个公司中，每个人都会有自己的岗位职责和层级之分">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-11T02:24:36.744Z">
+<meta property="og:updated_time" content="2021-09-17T06:59:56.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="mysql性能优化（内部培训笔记）" height="28">
+                <img src="/images/logo.svg" alt="工作流设计" height="28">
             
             </a>
         </div>
@@ -135,13 +135,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-11T02:23:24.000Z">2019-12-11</time>
+                <time class="level-item has-text-grey" datetime="2021-09-17T06:57:23.000Z">2021-09-17</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 198 个字)
+                    19 分钟 读完 (大约 2809 个字)
                 </span>
                 
                 
@@ -150,22 +150,123 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                mysql性能优化（内部培训笔记）
+                工作流设计
             
         </h1>
         <div class="content">
-            <h2 id="mysql性能优化方案"><a href="#mysql性能优化方案" class="headerlink" title="mysql性能优化方案"></a>mysql性能优化方案</h2><h3 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h3><p>InnoDB：事务安全、行级锁定、主键索引、支持外键（5.7版本的默认存储引擎，推荐）</p>
-<p>CSV：表格</p>
-<p>Archive：日志系统、历史数据、大量的设备数据采集</p>
-<p>Memory：redis，查找热度比较高的数据</p>
-<p>MyISAM:5.5以前的默认版本</p>
-<p>Federated:分布式、远程获取数据（远程表）</p>
-<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>排序，随机io变有序io</p>
-<p>适合大中型表</p>
-<p>MySQL中使用的是B+Tree：所有数据存在叶子节点，左闭合</p>
-<p>优化建议：索引列的数据长度能少则少；不一定越多越好；覆盖索引，少用select *；列的离散性要好</p>
-<p>explain  执行计划</p>
-<h3 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h3>
+            <h2 id="7个方面总结：审批工作流设计"><a href="#7个方面总结：审批工作流设计" class="headerlink" title="7个方面总结：审批工作流设计"></a>7个方面总结：审批工作流设计</h2><p>工作流是后台系统的核心和灵魂，而审批则是工作流中的最基础的应用场景。在公司管理和运转中引入审批工作流，替代原本的纸质申请和审批，可以达到以下目标：</p>
+<ul>
+<li>提高公司的运转效率</li>
+<li>公司管理制度规范化</li>
+<li>系统留档，便于追溯</li>
+<li>环保</li>
+</ul>
+<p>本文将从角色、内容、流程、动作、权限、配置、效率7个方面，对审批工作流的产品设计进行总结。</p>
+<p><strong>一. 角色</strong></p>
+<p>在一个公司中，每个人都会有自己的岗位职责和层级之分，不同的岗位和层级定位不一样，需要完成的任务也不一样。在审批流程中，我们只抽象划分为两类：</p>
+<p>角色1：发起人</p>
+<p>审批的发起人需要完成的主要是事务性、操作性的工作，同时也是一个审批流程的Owner，是最关心审批进展的人。因此在发起人的角度，在创建完审批事项后，还需要完善相关信息、催促审批人及时审批、处理驳回修改意见、重新提交等。发起人角度设计的要点总结如下：</p>
+<ul>
+<li>兼容统一发起入口和业务场景触发</li>
+<li>常用的审批事项要方便找到</li>
+<li>有统一汇总的审批管理页面</li>
+</ul>
+<p>角色2：审批人</p>
+<p>审批人在流程中需要完成的主要是决策性的工作，因此在审批人的视角，内容和操作都应该尽量精简：</p>
+<ul>
+<li>只看到最重要的信息，避免信息过多影响判断</li>
+<li>只进行必要操作，不能有过多选择或过多输入，影响决策效率</li>
+<li>统一的页面进行审批操作和管理</li>
+<li>需要有审批历史，以便追溯</li>
+</ul>
+<p><strong>二. 内容</strong> </p>
+<p>\1. 提炼最小集合</p>
+<p>根据审批事项的不同，需要流转的内容也是不同的。对于审批流程的设计来说，需要在实际业务中提炼出最核心的内容，一则可以减轻发起人的工作负担（发起一个审批要填一堆的资料相信没人会开心），二则可以提高决策的准确性和效率。</p>
+<p>例如一个请假审批流程，核心就是请假时间、事由和请假类型；而一个立项投决的审批，则需要重点展示立项会的表决结果，同时还需要把会议记录做为附件带上，以便在必要时可以查看，在交互上，这里同样需要注意内容的归类、收纳。</p>
+<p>设计要点总结如下：</p>
+<ul>
+<li>内容尽可能精炼</li>
+<li>有些内容是必要的，但系统可以自行获取就不要让发起人再输入一遍</li>
+<li>预置常用的内容，用选择的方式替代输入的方式，同时也提高了内容的规范性</li>
+</ul>
+<p>\2. 查看和修改</p>
+<p>在审批的过程中，有时候需要让不同的审批人查看不同的内容，且限定有些人有修改权限而有些人只有只读权限，这都会在后面的“权限”里总结。</p>
+<p>三. 流程 1. 自主选定审批人流程</p>
+<p>这是一种比较轻量、灵活的审批流程形式，适用于公司规模不大、流程没有标准化的情况。要点是发起人发起一个审批事项并提交时，需要自行选择下一个环节的审批人。而下一个环节的审批人审批通过后，可以选择继续流转到再下一个人去审批，或者结束这个流程。</p>
+<p>\2. 串行流程</p>
+<p>串行流程就是每一个审批环节的人审批通过后，才会进入到下一个环节。每个环节的驳回，可以根据业务需要，设计成驳回到发起人、驳回到上一个环节或驳回到指定环节重新审批，或兼而有之，做为选项供审批人选择。</p>
+<p><img src="https://www.zhidieyun.com/files/8/9/cf/4d112748a503126322ceba146e01fa2ba0d8cf98.jpg" alt="img"></p>
+<p>\3. 并行流程</p>
+<p>并行流程是一个审批环节需要几个人或角色审批通过才算通过，可以有以下两种方式：</p>
+<ul>
+<li>任意一个人审批通过即进入下一环节</li>
+<li>必须所有人审批通过才进入下一环节</li>
+</ul>
+<p>上述第一个方式比较好理解，第二个方式和串行流程容易混淆，即同样是要多个人审批，到底是一个接一个、还是同时通过才算通过？到底用哪种方式，区别是审批人是不是同一个级别，并行的方式其实类似于同级别的会签，而串行方式适合有上下层级关系的情况。</p>
+<p>并行流程的驳回则相对简单，一般是设计成有一个人驳回则该环节即算驳回。</p>
+<p><img src="https://www.zhidieyun.com/files/e/8/e1/f831f19d79550958d747bd9edd5c21eb608ce18e.jpg" alt="img"></p>
+<p>\4. 条件触发流程</p>
+<p>条件触发流程在审批工作流中也比较常见，设计上就是某个审批环节要由谁/或哪个角色审批，需要取决于条件判断。例如金额低于1万元由财务总监审批通过后即结束，金额在1万元以上则由副总裁审批通过后即结束。</p>
+<p><img src="https://www.zhidieyun.com/files/b/e/07/b12119d73c458a39d9bca9529976ca144f5507eb.png" alt="img"></p>
+<p>\5. 混合流程</p>
+<p>混合流程顾名思义就是混合了以上几种流程，还是以上述金额审批为例，我们修改成：金额低于1万元的，由财务审批通过后即结束；金额在1万元到10万元的，需要先由财务审批，之后交由副总裁审批通过后即结束；金额高于10万元的，需要由董事长和总裁一同审批通过后才结束。</p>
+<p><img src="https://www.zhidieyun.com/files/5/e/ac/2d12b9b1348fc3839de80149be59add7b511ace5.jpg" alt="img"></p>
+<p><strong>四. 动作</strong> </p>
+<p>\1. 通过</p>
+<p>通过动作由审批人操作，是否需要输入通过原因、通过原因是否必填需要根据实际业务情况决定。要点总结如下：</p>
+<ul>
+<li>简单申请不需要填写通过原因，或者原因选填</li>
+<li>通过原因需要填的话，可用于反馈或激励发起人的情况</li>
+</ul>
+<p>\2. 驳回修改</p>
+<p>驳回修改动作由审批人操作，和通过不同，为了让发起人知道如何修改，驳回原因一般需要设定成必填项，否则发起人或上一个审批环节的人不知道为何被驳回、以及要如何修改。</p>
+<p>驳回修改可根据业务需要，在以下逻辑中选择：</p>
+<ul>
+<li>驳回到发起人</li>
+<li>驳回上一环节</li>
+<li>驳回到选定的之前的某个审批环节</li>
+</ul>
+<p>\3. 重新提交</p>
+<p>重新提交由发起人操作，和驳回修改是一一对应的。设计上要注意，审批人审批重新提交的内容时，需要附带上一次驳回修改的原因。</p>
+<p>\4. 取消</p>
+<p>取消动作可选，一般来说是发起人取消，而不是审批人取消，原因如下：</p>
+<ul>
+<li>审批人只关心一个审批事务过来后，判断并决策是通过还是驳回</li>
+<li>取消和驳回含义容易混淆，区分不开</li>
+</ul>
+<p>在设计上，我们还可以做到发起人是否可取消可由配置项进行配置。</p>
+<p><strong>五. 权限</strong></p>
+<p>权限的控制贯穿在审批流程的方方面面，上述的角色、内容、流程和动作都会涉及到权限的控制。权限体系的设计是一个大工程，在审批流程中，采用基于角色的访问控制体系（RBAC）是一个不错的选择：</p>
+<p>“基于角色的访问控制体系，包括用户、角色、目标、操作、许可权五个基本数据元素，每个角色至少具备一个权限，每个用户至少扮演一个角色，可以对完全不同的角色分配完全相同的访问权限，用户和角色是多对多的关系。”</p>
+<p>设计要点总结如下：</p>
+<ul>
+<li>操作和许可权内容，可区分为功能权限和数据权限</li>
+<li>什么人可以发起什么审批，由功能权限控制</li>
+<li>什么人/角色在整个审批流程中可见什么数据，由数据权限控制</li>
+<li>什么人/角色可以审批什么环节，由独立的审批配置控制，下一节会进行阐述</li>
+</ul>
+<p>关于权限可以参考笔者另一个篇文章：面向中小企业SaaS的权限管理系统</p>
+<p><strong>六. 配置和扩展性</strong></p>
+<p>审批工作流的配置灵活度和开发复杂度成反比，具体要灵活到什么程度，需要由业务需求决定。一般针对公司开发的中后台系统，灵活性相对较少，而面向多个公司的商业化的系统，则灵活性要求大大提高。配置的灵活性体现在以下方面：</p>
+<ul>
+<li>审批流程的类型可修改</li>
+<li>具体的审批环节可增删改</li>
+<li>各个环节审批人/角色可配置</li>
+<li>审批相关的权限可变更</li>
+</ul>
+<p><strong>七. 效率</strong></p>
+<p>工作流的核心目标是提高企业运行效率，如果线上审批流程效率还不如原来的纸质操作，那这个流程的设计就是失败的，也失去了意义。因此，在完成整个审批流程的设计之后，我们还需要花大精力对流程的效率进行审视和优化。对于审批流程效率的提升，总结的经验点如下：</p>
+<ul>
+<li>审批的操作尽可能精简，且操作含义明确</li>
+<li>只要求输入必要的表单</li>
+<li>待审批事项及时通知到审批人</li>
+<li>审批进展及时通知发起人</li>
+<li>发起人可选择主动催促审批人</li>
+<li>做好下一步操作的引导</li>
+</ul>
+<p><strong>总结</strong></p>
+<p>审批流程是中后台工作流的基础应用，我们在设计的过程中，把握的核心要点是“提高效率，规范管理”，在设计过程中要时时回头审视，以免脱离了这个最重要的目标。</p>
+
         </div>
         
         
@@ -215,16 +316,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/12/12/Swift%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Swift编译过程</span>
+                <span class="level-item">bpmn流程模式</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/02/%E5%BC%80%E7%AF%87/">
-                <span class="level-item">开篇</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/">
+                <span class="level-item">hexo搭建流程</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -719,7 +820,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="mysql性能优化（内部培训笔记）" height="28">
+                    <img src="/images/logo.svg" alt="工作流设计" height="28">
                 
                 </a>
                 <p class="is-size-7">

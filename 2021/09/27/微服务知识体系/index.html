@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.0.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>微服务知识体系 - luxq blog</title>
+
+
+    <meta name="description" content="SpringCloud资料微服务资料目录目录…………………………………………………………………………………………………………………….. 2 1   SpringCloud简介………………………………………………………………………………………………. 1 1.1 什么是微服务…………………………………………………………………………………………………… 1 1.2 CAP定理………………………………">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微服务知识体系">
+<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2021&#x2F;09&#x2F;27&#x2F;%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB&#x2F;index.html">
+<meta property="og:site_name" content="luxq blog">
+<meta property="og:description" content="SpringCloud资料微服务资料目录目录…………………………………………………………………………………………………………………….. 2 1   SpringCloud简介………………………………………………………………………………………………. 1 1.1 什么是微服务…………………………………………………………………………………………………… 1 1.2 CAP定理………………………………">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2021-09-27T06:29:13.754Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="微服务知识体系" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">主页</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;" target="_blank" rel="noopener">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-09-27T02:21:45.000Z">2021-09-27</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 小时 读完 (大约 10578 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                微服务知识体系
+            
+        </h1>
+        <div class="content">
+            <h1 id="SpringCloud资料"><a href="#SpringCloud资料" class="headerlink" title="SpringCloud资料"></a>SpringCloud资料</h1><h1 id="微服务资料"><a href="#微服务资料" class="headerlink" title="微服务资料"></a>微服务资料</h1><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p>目录…………………………………………………………………………………………………………………….. 2</p>
+<p>1   SpringCloud简介………………………………………………………………………………………………. 1</p>
+<p>1.1 什么是微服务…………………………………………………………………………………………………… 1</p>
+<p>1.2 CAP定理…………………………………………………………………………………………………………… 1</p>
+<p>1.3 微服务架构图…………………………………………………………………………………………………… 2</p>
+<p>1.4 SpringCloud Netflix………………………………………………………………………………………………. 7</p>
+<p>1.5 Spring Cloud Alibaba…………………………………………………………………………………………… 10</p>
+<p>1.6 微服务之间的通讯…………………………………………………………………………………………… 10</p>
+<p>1.7 主流微服务注册中心浅析和对比………………………………………………………………………… 10</p>
+<p>1.8 单体优先还是微服务？…………………………………………………………………………………….. 11</p>
+<p>2   微服务框架……………………………………………………………………………………………………. 11</p>
+<p>2.1 参考微服务文件结构………………………………………………………………………………………… 11</p>
+<p>2.2 服务划分……………………………………………………………………………………………………….. 16</p>
+<h1 id><a href="#" class="headerlink" title></a></h1><p>**<br>**</p>
+<h1 id="1-SpringCloud简介"><a href="#1-SpringCloud简介" class="headerlink" title="1  SpringCloud简介"></a>1  SpringCloud简介</h1><h2 id="1-1-什么是微服务"><a href="#1-1-什么是微服务" class="headerlink" title="1.1 什么是微服务"></a>1.1 什么是微服务</h2><p>微服务架构是一个分布式系统，按照业务进行划分成为不同的服务单元，解决单体系统性能等不足。</p>
+<p>微服务是一种架构风格，一个大型软件应用由多个服务单元组成。系统中的服务单元可以单独部署，各个服务单元之间是松耦合的。</p>
+<h2 id="1-2-CAP定理"><a href="#1-2-CAP定理" class="headerlink" title="1.2 CAP定理"></a>1.2 CAP定理</h2><p>CAP定理，指的是在一个分布式系统中， Consistency（一致性）、 Availability（可用性）、Partition tolerance（分区容错性），三者不可得兼。</p>
+<p><strong>一致性（C**</strong>）：**在分布式系统中的所有数据备份，在同一时刻是否同样的值。（等同于所有节点访问同一份最新的数据副本）</p>
+<p><strong>可用性（A**</strong>）：**在集群中一部分节点故障后，集群整体是否还能响应客户端的读写请求。（对数据更新具备高可用性）</p>
+<p><strong>分区容忍性（P**</strong>）：**以实际效果而言，分区相当于对通信的时限要求。系统如果不能在时限内达成数据一致性，就意味着发生了分区的情况，必须就当前操作在C和A之间做出选择。</p>
+<p>CAP原则的精髓就是要么AP，要么CP，要么AC，但是不存在CAP。如果在某个分布式系统中数据无副本， 那么系统必然满足强一致性条件， 因为只有独一数据，不会出现数据不一致的情况，此时C和P两要素具备，但是如果系统发生了网络分区状况或者宕机，必然导致某些数据不可以访问，此时可用性条件就不能被满足，即在此情况下获得了CP系统，但是CAP不可同时满足。因此在进行分布式架构设计时，必须做出取舍。</p>
+<p><strong>Zookeeper**</strong>和Consul<strong><strong>保证的是CP</strong></strong>，而Eureka<strong><strong>则是AP</strong></strong>，Nacos<strong><strong>不仅支持CP</strong></strong>也支持AP<strong>**。</strong></p>
+<h2 id="1-3-微服务架构图"><a href="#1-3-微服务架构图" class="headerlink" title="1.3 微服务架构图"></a>1.3 微服务架构图</h2><h3 id="1-3-1-Eurake微服务架构图1"><a href="#1-3-1-Eurake微服务架构图1" class="headerlink" title="1.3.1 Eurake微服务架构图1"></a>1.3.1 Eurake微服务架构图1</h3><p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.jpg" alt="preview"></p>
+<h3 id="1-3-2-Eurake微服务架构图2"><a href="#1-3-2-Eurake微服务架构图2" class="headerlink" title="1.3.2 Eurake微服务架构图2"></a>1.3.2 Eurake微服务架构图2</h3><p><a href="https://www.processon.com/view/5b7d2f1fe4b075b9fe22d3d2?fromnew=1" target="_blank" rel="noopener">https://www.processon.com/view/5b7d2f1fe4b075b9fe22d3d2?fromnew=1</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png" alt="img"></p>
+<h3 id="1-3-3-Eurake微服务架构图3"><a href="#1-3-3-Eurake微服务架构图3" class="headerlink" title="1.3.3 Eurake微服务架构图3"></a>1.3.3 Eurake微服务架构图3</h3><p><a href="https://www.processon.com/view/5ed36dd5e401fd0735a531cd?fromnew=1" target="_blank" rel="noopener">https://www.processon.com/view/5ed36dd5e401fd0735a531cd?fromnew=1</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png" alt="img"></p>
+<h3 id="1-3-4-Alibaba微服务架构图4"><a href="#1-3-4-Alibaba微服务架构图4" class="headerlink" title="1.3.4 Alibaba微服务架构图4"></a>1.3.4 Alibaba微服务架构图4</h3><p><a href="https://www.processon.com/view/5db03daee4b0e433944b5a68?fromnew=1" target="_blank" rel="noopener">https://www.processon.com/view/5db03daee4b0e433944b5a68?fromnew=1</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png" alt="img"></p>
+<h3 id="1-3-5-Alibaba微服务架构图5"><a href="#1-3-5-Alibaba微服务架构图5" class="headerlink" title="1.3.5 Alibaba微服务架构图5"></a>1.3.5 Alibaba微服务架构图5</h3><p><a href="https://www.processon.com/view/60c18dcbe401fd34a14ea35a?fromnew=1" target="_blank" rel="noopener">https://www.processon.com/view/60c18dcbe401fd34a14ea35a?fromnew=1</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.png" alt="img"></p>
+<h3 id="1-3-6-Alibaba微服务架构图6"><a href="#1-3-6-Alibaba微服务架构图6" class="headerlink" title="1.3.6 Alibaba微服务架构图6"></a>1.3.6 Alibaba微服务架构图6</h3><p><a href="https://www.processon.com/view/5dc2c0ffe4b0e433945eefe9?fromnew=1" target="_blank" rel="noopener">https://www.processon.com/view/5dc2c0ffe4b0e433945eefe9?fromnew=1</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.png" alt="img"></p>
+<p><a href="https://www.processon.com/view/60e503da0e3e745f07eb05aa?fromnew=1" target="_blank" rel="noopener">https://www.processon.com/view/60e503da0e3e745f07eb05aa?fromnew=1</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image007.png" alt="img"></p>
+<p><a href="https://www.processon.com/view/5fbc7ad8e401fd2d6ed50d8f?fromnew=1" target="_blank" rel="noopener">https://www.processon.com/view/5fbc7ad8e401fd2d6ed50d8f?fromnew=1</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.png" alt="img"></p>
+<h2 id="1-4-SpringCloud-Netflix"><a href="#1-4-SpringCloud-Netflix" class="headerlink" title="1.4 SpringCloud Netflix"></a>1.4 SpringCloud Netflix</h2><p>微服务架构的逻辑结构组成，包括各种微服务、注册发现、服务网关、熔断器、统一配置、跟踪服务等。</p>
+<h3 id="1-4-1-Feign"><a href="#1-4-1-Feign" class="headerlink" title="1.4.1 Feign"></a>1.4.1 Feign</h3><p>Feign(接口调用)：微服务之间通过Rest接口通讯，Spring Cloud提供Feign框架来支持Rest的调用，Feign使得不同进程的Rest接口调用得以用优雅的方式进行，这种优雅表现得就像同一个进程调用一样。</p>
+<h3 id="1-4-2-Eureka"><a href="#1-4-2-Eureka" class="headerlink" title="1.4.2 Eureka"></a>1.4.2 Eureka</h3><p>Netflix eureka(注册发现)：微服务模式下，一个大的Web应用通常都被拆分为很多比较小的web应用(服务)，这个时候就需要有一个地方保存这些服务的相关信息，才能让各个小的应用彼此知道对方，这时就需要在注册中心进行注册。</p>
+<p>每个应用启动时向配置的注册中心注册自己的信息（ip地址，端口号, 服务名称等信息），注册中心将他们保存起来，服务间相互调用的时候，通过服务名称就可以到注册中心找到对应的服务信息，从而进行通讯。</p>
+<p>注册与发现服务为微服务之间的调用带来了方便，解决了硬编码的问题。服务间只通过对方的服务id，而无需知道其ip和端口即可以获取对方方服务。</p>
+<h3 id="1-4-3-Ribbon"><a href="#1-4-3-Ribbon" class="headerlink" title="1.4.3 Ribbon"></a>1.4.3 Ribbon</h3><p>Ribbon(负载均衡)：Ribbon是Netflix发布的负载均衡器，它有助于控制HTTP和TCP客户端的行为。为Ribbon配置服务提供者的地址列表后，Ribbon就可基于某种负载均衡算法，自动地帮助服务消费者去请求。</p>
+<p>Ribbon默认为我们提供了很多的负载均衡算法，例如轮询、随机等。当然，我们也可为Ribbon实现自定义的负载均衡算法。</p>
+<p>在SpringCloud中，当Ribbon与Eureka配合使用时，Ribbon可自动从EurekaServer获取服务提供者的地址列表，并基于负载均衡算法，请求其中一个服务提供者的实例</p>
+<p>（为了服务的可靠性，一个微服务可能部署多个实例）</p>
+<h3 id="1-4-4-Hystrix"><a href="#1-4-4-Hystrix" class="headerlink" title="1.4.4 Hystrix"></a>1.4.4 Hystrix</h3><p><strong>Hystrix(**</strong>熔断器)<strong>**：</strong>当服务提供者响应非常缓慢，那么消费者对提供者的请求就会被强制等待，直到提供者响应或超时。</p>
+<p>在高负载场景下，如果不做任何处理，此类问题可能会导致服务消费者的资源耗竭甚至整个系统的崩溃（雪崩效应），Hystrix正是为了防止此类问题发生。</p>
+<p>Hystrix是由Netflix开源的一个延迟和容错库，用于隔离访问远程系统、服务或者第三方库，防止级联失败，从而提升系统的可用性与容错性。</p>
+<p><strong>Hystrix**</strong>主要通过以下几点实现延迟和容错：**</p>
+<p><strong>包裹请求：</strong>使用HystrixCommand（或HystrixObservableCommand）包裹对依赖的调用逻辑，每个命令在独立线程中执行。这使用了设计模式中的“命令模式”。</p>
+<p><strong>跳闸机制：</strong>当某服务的错误率超过一定阈值时，Hystrix可以自动或者手动跳闸，停止请求该服务一段时间。</p>
+<p><strong>资源隔离：</strong>Hystrix为每个依赖都维护了一个小型的线程池（或者信号量）。如果该线程池已满，发往该依赖的请求就被立即拒绝，而不是排队等候，从而加速失败判定。</p>
+<p><strong>监控：</strong>Hystrix可以近乎实时地监控运行指标和配置的变化，例如成功、失败、超时和被拒绝的请求等。</p>
+<p><strong>回退机制：</strong>当请求失败、超时、被拒绝，或当断路器打开时，执行回退逻辑。回退逻辑可由开发人员指定。</p>
+<h3 id="1-4-5-Zuul"><a href="#1-4-5-Zuul" class="headerlink" title="1.4.5 Zuul"></a>1.4.5 Zuul</h3><p>Zuul(微服务网关) ：不同的微服务一般会有不同的网络地址，而外部客户端可能需要调用多个服务的接口才能完成一个业务需求。</p>
+<p>例如一个电影购票的手机APP，可能调用多个微服务的接口才能完成一次购票的业务流程</p>
+<p>如果让客户端直接与各个微服务通信，会有以下的问题：</p>
+<p>1、客户端会多次请求不同的微服务，增加了客户端的复杂性。</p>
+<p>2、存在跨域请求，在一定场景下处理相对复杂。</p>
+<p>3、认证复杂，每个服务都需要独立认证。</p>
+<p>4、难以重构，随着项目的迭代，可能需要重新划分微服务。</p>
+<p>例如，可能将多个服务合并成一个或者将一个服务拆分成多个。如果客户端直接与微服务通信，那么重构将很难实施。</p>
+<p>某些微服务可能使用了对防火墙/浏览器不友好的协议，直接访问时会有一定的困难。</p>
+<p>以上问题可借助微服务网关解决。微服务网关是介于客户端和服务器端之间的中间层，所有的外部请求都会先经过微服务网关。</p>
+<p>使用微服务网关后，微服务网关将封装应用程序的内部结构，客户端只用跟网关交互，而无须直接调用特定微服务的接口。</p>
+<p>这样，开发就可以得到简化。不仅如此，使用微服务网关还有以下优点：</p>
+<p>易于监控。可在微服务网关收集监控数据并将其推送到外部系统进行分析。</p>
+<p>易于认证。可在微服务网关上进行认证，然后再将请求转发到后端的微服务，而无须在每个微服务中进行认证。</p>
+<p>减少了客户端与各个微服务之间的交互次数。</p>
+<h3 id="1-4-6-Config"><a href="#1-4-6-Config" class="headerlink" title="1.4.6 Config"></a>1.4.6 Config</h3><p>Spring cloud Config（ 统一配置服务）：对于传统的单体应用，常使用配置文件管理所有配置。</p>
+<p>例如一个SpringBoot开发的单体应用，可将配置内容放在application.yml文件中。如果需要切换环境，可设置多个Profile，并在启动应用时指定spring.profiles.active={profile}。</p>
+<p>然而，在微服务架构中，微服务的配置管理一般有以下需求：</p>
+<p>集中管理配置。一个使用微服务架构的应用系统可能会包含成百上千个微服务，因此集中管理配置是非常有必要的。</p>
+<p>不同环境，不同配置。例如，数据源配置在不同的环境（开发、测试、预发布、生产等）中是不同的。</p>
+<p>运行期间可动态调整。例如，可根据各个微服务的负载情况，动态调整数据源连接池大小或熔断阈值，并且在调整配置时不停止微服务。</p>
+<p>配置修改后可自动更新。如配置内容发生变化，微服务能够自动更新配置。</p>
+<p>综上所述，对于微服务架构而言，一个通用的配置管理机制是必不可少的，常见做法是使用配置服务器管理配置。</p>
+<p>Spring cloud bus利用Git或SVN等管理配置、采用Kafka或者RabbitMQ等消息总线通知所有应用，从而实现配置的自动更新并且刷新所有微服务实例的配置。</p>
+<h3 id="1-4-7-Zipkin"><a href="#1-4-7-Zipkin" class="headerlink" title="1.4.7 Zipkin"></a>1.4.7 Zipkin</h3><p>Sleuth+ZipKin(跟踪服务)：Sleuth和Zipkin结合使用可以通过图形化的界面查看微服务请求的延迟情况以及各个微服务的依赖情况。</p>
+<p>需要注意的是Spring boot2及以上不在支持Zipkin的自定义，需要到官方网站下载ZipKin相关的jar包。</p>
+<h2 id="1-5-Spring-Cloud-Alibaba"><a href="#1-5-Spring-Cloud-Alibaba" class="headerlink" title="1.5 Spring Cloud Alibaba"></a>1.5 Spring Cloud Alibaba</h2><p><strong>Nacos**</strong>：**一个更易于构建云原生应用的动态服务发现、配置管理和服务管理平台。</p>
+<p><strong>Sentinel**</strong>：**把流量作为切入点，从流量控制、熔断降级、系统负载保护等多个维度保护服务的稳定性。</p>
+<p><strong>RocketMQ**</strong>：**开源的分布式消息系统，基于高可用分布式集群技术，提供低延时的、高可靠的消息发布与订阅服务。</p>
+<p><strong>Dubbo**</strong>：**这个就不用多说了，在国内应用非常广泛的一款高性能 Java RPC 框架。</p>
+<p><strong>Seata**</strong>：**阿里巴巴开源产品，一个易于使用的高性能微服务分布式事务解决方案。</p>
+<p><strong>Arthas**</strong>：**开源的Java动态追踪工具，基于字节码增强技术，功能非常强大。</p>
+<h2 id="1-6-微服务之间的通讯"><a href="#1-6-微服务之间的通讯" class="headerlink" title="1.6 微服务之间的通讯"></a>1.6 微服务之间的通讯</h2><h3 id="1-6-1-同步"><a href="#1-6-1-同步" class="headerlink" title="1.6.1 同步"></a>1.6.1 同步</h3><p>REST HTTP 协议、RPC TCP 协议。</p>
+<h3 id="1-6-2-异步"><a href="#1-6-2-异步" class="headerlink" title="1.6.2 异步"></a>1.6.2 异步</h3><p>消息中间件，常见的消息中间件有 Kafka、ActiveMQ、RabbitMQ、RocketMQ ，常见的协议有 AMQP、MQTTP、STOMP、XMPP。</p>
+<h2 id="1-7-主流微服务注册中心浅析和对比"><a href="#1-7-主流微服务注册中心浅析和对比" class="headerlink" title="1.7 主流微服务注册中心浅析和对比"></a>1.7 主流微服务注册中心浅析和对比</h2><p><a href="https://developer.aliyun.com/article/698930" target="_blank" rel="noopener">https://developer.aliyun.com/article/698930</a></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Nacos</strong></th>
+<th><strong>Eureka</strong></th>
+<th><strong>Consul</strong></th>
+<th><strong>CoreDNS</strong></th>
+<th><strong>Zookeeper</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一致性协议</td>
+<td>CP+AP</td>
+<td>AP</td>
+<td>CP</td>
+<td>—</td>
+<td>CP</td>
+</tr>
+<tr>
+<td>健康检查</td>
+<td>TCP/HTTP/MYSQL/Client Beat</td>
+<td>Client Beat</td>
+<td>TCP/HTTP/gRPC/Cmd</td>
+<td>—</td>
+<td>Keep Alive</td>
+</tr>
+<tr>
+<td>负载均衡策略</td>
+<td>权重/metadata/Selector</td>
+<td>Ribbon</td>
+<td>Fabio</td>
+<td>RoundRobin</td>
+<td>—</td>
+</tr>
+<tr>
+<td>雪崩保护</td>
+<td>有</td>
+<td>有</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>自动注销实例</td>
+<td>支持</td>
+<td>支持</td>
+<td>不支持</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>访问协议</td>
+<td>HTTP/DNS</td>
+<td>HTTP</td>
+<td>HTTP/DNS</td>
+<td>DNS</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>监听支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>多数据中心</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>不支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>跨注册中心同步</td>
+<td>支持</td>
+<td>不支持</td>
+<td>支持</td>
+<td>不支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>SpringCloud集成</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>不支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>Dubbo集成</td>
+<td>支持</td>
+<td>不支持</td>
+<td>不支持</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>K8S集成</td>
+<td>支持</td>
+<td>不支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+</tbody></table>
+<h2 id="1-8-单体优先还是微服务？"><a href="#1-8-单体优先还是微服务？" class="headerlink" title="1.8 单体优先还是微服务？"></a>1.8 单体优先还是微服务？</h2><p><a href="https://zhuanlan.zhihu.com/p/52638618" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/52638618</a></p>
+<h2 id="1-9-监控服务"><a href="#1-9-监控服务" class="headerlink" title="1.9 监控服务"></a>1.9 监控服务</h2><p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image009.png" alt="img"></p>
+<h3 id="1-9-1-Nacos"><a href="#1-9-1-Nacos" class="headerlink" title="1.9.1 Nacos"></a>1.9.1 Nacos</h3><p><a href="http://localhost:8001/nacos" target="_blank" rel="noopener">http://localhost:8001/nacos</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image010.png" alt="img"></p>
+<h3 id="1-9-2-SkyWalking"><a href="#1-9-2-SkyWalking" class="headerlink" title="1.9.2 SkyWalking"></a>1.9.2 SkyWalking</h3><p>可以从<a href="http://skywalking.apache.org/downloads下载apache-skywalking-apm-$version.tar.gz包。" target="_blank" rel="noopener">http://skywalking.apache.org/downloads下载apache-skywalking-apm-$version.tar.gz包。</a></p>
+<p>skywalking提供了一个可视化的监控平台，安装好之后，在浏览器中输入(<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> (opens new window))就可以访问了。</p>
+<p>配置vm参数-idea配置vm参数</p>
+<p>-javaagent:D:\20.Vue\apache-skywalking-apm-bin\agent\skywalking-agent.jar</p>
+<p>-Dskywalking.agent.service_name=febs-gateway</p>
+<p>-Dskywalking.collector.backend_service=localhost:11800</p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image011.png" alt="img"></p>
+<h3 id="1-9-3-Knife4j"><a href="#1-9-3-Knife4j" class="headerlink" title="1.9.3 Knife4j"></a>1.9.3 Knife4j</h3><p><a href="https://localhost:8301/doc.html" target="_blank" rel="noopener">https://localhost:8301/doc.html</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image012.png" alt="img"></p>
+<h3 id="1-9-4-Spring-Boot-Admin"><a href="#1-9-4-Spring-Boot-Admin" class="headerlink" title="1.9.4 Spring Boot Admin"></a>1.9.4 Spring Boot Admin</h3><p><a href="http://localhost:8401/applications" target="_blank" rel="noopener">http://localhost:8401/applications</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image013.png" alt="img"></p>
+<h3 id="1-9-5-TxManager"><a href="#1-9-5-TxManager" class="headerlink" title="1.9.5 TxManager"></a>1.9.5 TxManager</h3><p><a href="http://localhost:8501/admin/index.html#/" target="_blank" rel="noopener">http://localhost:8501/admin/index.html#/</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image014.png" alt="img"></p>
+<h2 id="1-10-分布式事务LCN-–-TM-服务端server-TC-客户端-spring-boot-使用）"><a href="#1-10-分布式事务LCN-–-TM-服务端server-TC-客户端-spring-boot-使用）" class="headerlink" title="1.10 分布式事务LCN – TM (服务端server ) + TC ( 客户端-spring-boot 使用）"></a>1.10 分布式事务LCN – TM (服务端server ) + TC ( 客户端-spring-boot 使用）</h2><p>LCN基本实现原理</p>
+<p>1.发起方与参与方都与我们的LCN管理器一直保持长连接；</p>
+<p>2.发起方在调用接口之前，先向LCN管理器申请一个全局的事务分组id；</p>
+<p>3.发起方调用接口的时候在请求头中传递事务分组id；</p>
+<p>4.参与方获取到请求头中有事务分组的id的，则当前业务逻辑执行完实现假关闭，不会提交或者回滚当前的事务。</p>
+<p>5.发起方调用完接口后，如果出现异常的情况下，在通知给事务协调者回滚事务，这时候事务协调则告诉给参与方回滚当前的事务。</p>
+<p><a href="https://blog.csdn.net/qq_41463655/article/details/104996363" target="_blank" rel="noopener">https://blog.csdn.net/qq_41463655/article/details/104996363</a></p>
+<p><a href="https://juejin.cn/post/6844904127865208839" target="_blank" rel="noopener">https://juejin.cn/post/6844904127865208839</a></p>
+<h2 id="1-11-参考项目资料"><a href="#1-11-参考项目资料" class="headerlink" title="1.11 参考项目资料"></a>1.11 参考项目资料</h2><p><a href="https://gitee.com/log4j/pig" target="_blank" rel="noopener">https://gitee.com/log4j/pig</a></p>
+<p><a href="https://gitee.com/matevip/matecloud" target="_blank" rel="noopener">https://gitee.com/matevip/matecloud</a></p>
+<p><a href="https://gitee.com/mrbirdd/FEBS-Cloud?_from=gitee_search" target="_blank" rel="noopener">https://gitee.com/mrbirdd/FEBS-Cloud?_from=gitee_search</a></p>
+<h1 id="2-微服务框架"><a href="#2-微服务框架" class="headerlink" title="2  微服务框架"></a>2  微服务框架</h1><h2 id="2-1-参考微服务文件结构"><a href="#2-1-参考微服务文件结构" class="headerlink" title="2.1 参考微服务文件结构"></a>2.1 参考微服务文件结构</h2><h3 id="2-1-1-SpringBlade"><a href="#2-1-1-SpringBlade" class="headerlink" title="2.1.1 SpringBlade"></a>2.1.1 SpringBlade</h3><p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image015.png" alt="img"></p>
+<h3 id="2-1-2-Pig微服务结构"><a href="#2-1-2-Pig微服务结构" class="headerlink" title="2.1.2 Pig微服务结构"></a>2.1.2 Pig微服务结构</h3><p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image016.png" alt="img"></p>
+<h3 id="2-1-3-BIM-项目微服务文件结构"><a href="#2-1-3-BIM-项目微服务文件结构" class="headerlink" title="2.1.3 BIM 项目微服务文件结构"></a>2.1.3 BIM 项目微服务文件结构</h3><p>├─base // 基础依赖库</p>
+<p>│ ├─common</p>
+<p>│ ├─message-help-starter</p>
+<p>│ ├─message.help</p>
+<p>│ ├─security.client</p>
+<p>│ ├─server.core</p>
+<p>│ └─server.support</p>
+<p>├─database // 数据库相关配置</p>
+<p>├─logs</p>
+<p>├─requests</p>
+<p>│ └─config-servers</p>
+<p>└─servers // 服务包</p>
+<p>  ├─batch.model // 模型服务(BIM业务的)</p>
+<p>  │ ├─res</p>
+<p>  │ ├─src</p>
+<p>  ├─business-server // 项目业务服务目录</p>
+<p>  │ ├─er</p>
+<p>  │ ├─server-api-bpm // bpm流程api服务</p>
+<p>  │ │ └─src</p>
+<p>  │ ├─server-business // 项目服务</p>
+<p>  │ │ ├─configDev</p>
+<p>  │ │ ├─configPro</p>
+<p>  │ │ ├─configTest</p>
+<p>  │ │ ├─sql</p>
+<p>  │ │ ├─src</p>
+<p>  │ ├─server-doc // 档案服务</p>
+<p>  │ │ ├─configDev</p>
+<p>  │ │ ├─configPro</p>
+<p>  │ │ ├─configTest</p>
+<p>  │ │ └─src</p>
+<p>  │ ├─server-labour // 劳务管理</p>
+<p>  │ │ ├─configDev</p>
+<p>  │ │ ├─configPro</p>
+<p>  │ │ ├─configTest</p>
+<p>  │ │ └─src</p>
+<p>  │ ├─server-news // 新闻管理</p>
+<p>  │ │ ├─configDev</p>
+<p>  │ │ ├─configPro</p>
+<p>  │ │ ├─configTest</p>
+<p>  │ │ ├─src</p>
+<p>  │ ├─server-quality // 质量管理</p>
+<p>  │ │ ├─doc</p>
+<p>  │ │ ├─sql</p>
+<p>  │ │ └─src</p>
+<p>  │ ├─server-safety // 安全管理</p>
+<p>  │ │ ├─configDev</p>
+<p>  │ │ ├─configPro</p>
+<p>  │ │ ├─configTest</p>
+<p>  │ │ ├─src</p>
+<p>  │ ├─server-schedule</p>
+<p>  │ │ ├─configDev</p>
+<p>  │ │ ├─configPro</p>
+<p>  │ │ ├─configTest</p>
+<p>  │ │ ├─src</p>
+<p>  │ ├─server-site // 现场管理</p>
+<p>  │ │ ├─configDev</p>
+<p>  │ │ ├─configPro</p>
+<p>  │ │ ├─configTest</p>
+<p>  │ │ └─src</p>
+<p>  │ └─server-steel</p>
+<p>  │   ├─configDev</p>
+<p>  │   ├─configPro</p>
+<p>  │   ├─configTest</p>
+<p>  │   └─src</p>
+<p>  ├─server-cost // 合同与产值</p>
+<p>  │ ├─configDev</p>
+<p>  │ ├─configPro</p>
+<p>  │ ├─configTest</p>
+<p>  │ ├─docs</p>
+<p>  │ ├─src</p>
+<p>  ├─funcs // 支撑性功能，旧项目移植过来，可以归到base</p>
+<p>  │ ├─fastdfs</p>
+<p>  │ ├─fastdfs-client-java</p>
+<p>  │ ├─tus.upload</p>
+<p>  │ └─video.ffmpeg</p>
+<p>  ├─starters // starter（自定义的一些starter）</p>
+<p>  │ ├─fastdfs-spring-boot-starter</p>
+<p>  │ └─server.file // 文件服务，可以当到 sys-manage-center</p>
+<p>  └─sys-manage-center // 框架性微服务</p>
+<p>​    ├─api-gateway // 网关服务</p>
+<p>​    │ ├─configDev</p>
+<p>​    │ ├─configPro</p>
+<p>​    │ ├─configTest</p>
+<p>​    │ ├─src</p>
+<p>​    ├─auth-center // 授权服务</p>
+<p>​    │ ├─configDev</p>
+<p>​    │ ├─configPro</p>
+<p>​    │ ├─configTest</p>
+<p>​    │ ├─docs</p>
+<p>​    │ ├─src</p>
+<p>​    ├─bpm-center // 流程服务</p>
+<p>​    │ ├─configDev</p>
+<p>​    │ ├─configPro</p>
+<p>​    │ ├─configTest</p>
+<p>​    │ ├─docs</p>
+<p>​    │ ├─sql</p>
+<p>​    │ ├─src</p>
+<p>​    ├─config // 配置中心</p>
+<p>​    │ ├─configDev</p>
+<p>​    │ ├─configPro</p>
+<p>​    │ ├─configTest</p>
+<p>​    │ ├─src</p>
+<p>​    ├─register // 注册中心</p>
+<p>​    │ ├─configDev</p>
+<p>​     │ ├─configPro</p>
+<p>​    │ ├─configTest</p>
+<p>​    │ ├─src</p>
+<p>​    └─user-center // 用户中心</p>
+<p>​      ├─configDev</p>
+<p>​      ├─configPro</p>
+<p>​      ├─configTest</p>
+<p>​      ├─doc</p>
+<p>​      ├─sql</p>
+<p>​      ├─src</p>
+<p>原来规划了一个api层但是common里面要统一实体，维护起来很麻烦，就没维护了</p>
+<p>各服务数据库隔离，原则上不允许跨库跨模式查询</p>
+<h3 id="2-1-4-Ebid-电子招投标项目微服务文件结构"><a href="#2-1-4-Ebid-电子招投标项目微服务文件结构" class="headerlink" title="2.1.4 Ebid 电子招投标项目微服务文件结构"></a>2.1.4 Ebid 电子招投标项目微服务文件结构</h3><p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image017.png" alt="img"></p>
+<h2 id="2-2-服务划分"><a href="#2-2-服务划分" class="headerlink" title="2.2 服务划分"></a>2.2 服务划分</h2><h3 id="2-2-1-服务划分"><a href="#2-2-1-服务划分" class="headerlink" title="2.2.1 服务划分"></a>2.2.1 服务划分</h3><p>微服务的划分方法，常见的是两种，按业务能力和按子域。有的观点，认为两种划分可以根据不同的情况进行选择。而有的观点，认为应该这样划分而不要那样划分。</p>
+<p>“子域”，就是DDD中的”子域”。</p>
+<p>“业务能力”，是一个专用名词，指的是一个连续的业务过程，其中不需要中断，也不需要别的业务过程的参与。这些业务过程自然组织起来，比如首尾相连，或者，由用户参与来自然连接。</p>
+<p>两种不同的服务划分风格，反映了对业务本身的不同的描述与划分的风格。</p>
+<p>比较形象地讲，按子域划分，就是把业务划成一块一块的。按业务能力划分，就是把业务划成一段一段的。一块一块的，描述业务概念和它们之间的关系。一段一段的，描述业务执行的步骤和过程。</p>
+<p>按业务能力划分的优势主要在运行时。各个服务的运行时依赖被尽量减少。在服务性能、可用性方面不会相互牵绊，可以做到最好。</p>
+<p>而按子域划分的优势主要在设计时和演进时。有利于应对业务的规模发展、复杂性增加和分别演进。</p>
+<h3 id="2-2-2-共享实体"><a href="#2-2-2-共享实体" class="headerlink" title="2.2.2 共享实体"></a>2.2.2 共享实体</h3><p>\1.  做基础包负责实体的管理，但是没有必要，一个是不同服务可能完全是两种语言，共享实体的问题不存在，2.同样语言，不同服务的编写团队不同，风格不同，规范不同，反而会引起工程管理的复杂，所以既然是微服务就遵循它的优势，足够独立；</p>
+<p>\2.  微服务的主要优点体现在这里：你可以按照你的情况自己决定你在多大程度上共享实体。不同的语言、不同的团队、不同的业务节奏、实体上不同的关注角度，都可以导致你对实体共享的程度不同，而这些程度都可以在微服务的架构中得到支持。而且当你的共享程度在演进中发生变化的时候，微服务架构也能支持。</p>
+<p>\3.  请求和响应 以DTO 的形式放到一个公共的包中 gradle编译可控制哪些类不要编译 按需编译 然后DTO 和 DO 间采用 mapstruct 转换。</p>
+<p>\4.  解决方法有三个：1.单独将user实体类放入common包中，如果这样，user实体类的增删改查方法再auth中，但是实体类却在common中，难免有些奇怪，后期维护的时候可能会找不到这个实体类。2.将所有的entity都放入common包中。这样算然比较统一，但是对本系统进行分割，本来就是因为系统的业务比较独立，除了某些特殊情况外，实体类应该是不会有任何的共有。3.观察了一下，hr这边虽然引用了user类，但实际上只是想获取user类中的邮箱字段，既然如此，就直接写个接口返回Map即可。最后采用的是第三种解决办法，虽然说是彻底解耦了，但是只是调用一次接口就返回一个字符串，也不知道是否是最佳方案。</p>
+<p>\5.  独立的服务独立的数据源 entity公用就没有分库的意义了。</p>
+<h3 id="2-2-3-POJO-DTO"><a href="#2-2-3-POJO-DTO" class="headerlink" title="2.2.3 POJO DTO"></a>2.2.3 POJO DTO</h3><p>DTO（Data Transfer Object）数据传输对象，服务间的交互使用DTO来解耦</p>
+<p>VO（Value Object）值对象，前端展示的数据</p>
+<p>PO（Persistant Object）持久对象</p>
+<p>BO（Business Object）业务对象，服务内部使用的业务对象，用来存储数据库提取的数据</p>
+<p>系统和系统的复杂度不同，协作水平不同而定，协作时保证概念一致</p>
+<p>DTO 和 DO 间采用dozer + lombok， mapstruct 转换</p>
+<h2 id="2-3-微服务项目规划"><a href="#2-3-微服务项目规划" class="headerlink" title="2.3 微服务项目规划"></a>2.3 微服务项目规划</h2><h3 id="2-3-1-技术选型"><a href="#2-3-1-技术选型" class="headerlink" title="2.3.1 技术选型"></a>2.3.1 技术选型</h3><p>Spring Cloud Alibaba </p>
+<p>SpringCloud GateWay 网关 </p>
+<p>Nacos：服务发现、配置管理和服务管理</p>
+<p>Feign: 服务间调用</p>
+<p>Redis:</p>
+<p>RocketMQ：</p>
+<p><strong>可选：</strong></p>
+<p>Sentinel：流量控制、熔断降级、负载保护</p>
+<p>Ribbon:负载均衡</p>
+<p>Spring Cloud LoadBalancer：客户端负载均衡</p>
+<p>Seata：分布式事务</p>
+<p>Skywalking:链路追踪</p>
+<p>任务调度：</p>
+<p>Grafana：大屏展示-服务监控</p>
+<p>Prometheus：监控报警-服务监控</p>
+<p>Zipkin：调用链跟踪-服务监控</p>
+<p>EPK：日志中心-服务监控</p>
+<p>Security：安全审计-服务监控</p>
+<h3 id="2-3-2-项目文件目录规划"><a href="#2-3-2-项目文件目录规划" class="headerlink" title="2.3.2 项目文件目录规划"></a>2.3.2 项目文件目录规划</h3><p>微服务项目名称：<strong>rdp-cloud</strong></p>
+<p>rdp-base – 公共工具类核心包</p>
+<p>rdp-common – 公共类包</p>
+<p>rdp-auth – 授权服务</p>
+<p>rdp-services – 微服务</p>
+<p>|–service-flowable – 流程微服务</p>
+<p>|–service-user – 用户微服务</p>
+<p>|–service-generator – 代码生成微服务</p>
+<p>|–service-system –系统功能微服务</p>
+<p>|–service-jog –任务服务</p>
+<p>|……</p>
+<p>rdp-service-api – 微服务间接口定义模块</p>
+<p>rdp-ops – 微服务基础模块</p>
+<p>|–gateway –Spring Cloud Gateway网关</p>
+<p>|–register –Nacos Server</p>
+<p>|–monitor –服务监控</p>
+<p>|–sentinel-dashboard –流量高可用</p>
+<p>\1. 基础类包与公共类包的处理方式？随业务变化和基本不变的类处理方式？</p>
+<p>\2. 微服务间 DTO 类的定义及处理方式？</p>
+<p>\3. rdp-services 业务服务统一归此文件下。</p>
+<p>\4. rdp-ops 微服务架构相关的扩展统一归此文件下。</p>
+<h2 id="2-4-系统介绍"><a href="#2-4-系统介绍" class="headerlink" title="2.4 系统介绍"></a>2.4 系统介绍</h2><h3 id="2-4-1-密码授权"><a href="#2-4-1-密码授权" class="headerlink" title="2.4.1 密码授权"></a>2.4.1 密码授权</h3><p>1.获取验证码</p>
+<p>GET <a href="http://localhost:8802/auth/captcha?key=6113" target="_blank" rel="noopener">http://localhost:8802/auth/captcha?key=6113</a></p>
+<p>\2. 密码登录获取Token</p>
+<p>Post <a href="http://localhost:8802/auth/oauth/token" target="_blank" rel="noopener">http://localhost:8802/auth/oauth/token</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image018.png" alt="img"></p>
+<p><strong>返回Response</strong>:</p>
+<p>{“access_token”:”2a60eb6a-779e-4911-9ed4-902f978d8299”,”token_type”:”bearer”,”refresh_token”:”1fde4fa4-3083-4e40-a714-fd4cf492f7a0”,”expires_in”:86399,”scope”:”all”}</p>
+<p><strong>Authorization</strong>: Basic base64encode(username+”:”+password),username:第三方应用名称，password:密码。</p>
+<p><strong>使用PostMan 时，可选择Basic Auth</strong></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image019.png" alt="img"></p>
+<p>3.通过token获取 用户信息及权限信息</p>
+<p>Get <a href="http://localhost:8802/auth/user" target="_blank" rel="noopener">http://localhost:8802/auth/user</a></p>
+<p><strong>Authorization</strong>: bearer 2a60eb6a-779e-4911-9ed4-902f978d8299</p>
+<p><strong>Authorization=bearer+token</strong></p>
+<p>4.检查token,检查token相应的用户及权限信息</p>
+<p>POST <a href="http://localhost:8802/auth/oauth/check_token" target="_blank" rel="noopener">http://localhost:8802/auth/oauth/check_token</a> </p>
+<p>Authorization: Basic ZmViczoxMjM0NTY=</p>
+<p>token=b2633257-3e2d-447a-aa22-5f1fb2b4cada</p>
+<p>5.刷新token,更新token 有效期</p>
+<p><a href="http://localhost:8802/auth/oauth/token" target="_blank" rel="noopener">http://localhost:8802/auth/oauth/token</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image020.png" alt="img"></p>
+<h1 id="3-授权、认证服务"><a href="#3-授权、认证服务" class="headerlink" title="3  授权、认证服务"></a>3  授权、认证服务</h1><h2 id="3-1-spring-cloud-starter-security"><a href="#3-1-spring-cloud-starter-security" class="headerlink" title="3.1 spring-cloud-starter-security"></a>3.1 spring-cloud-starter-security</h2><p>spring-cloud-starter-security主要用来认证和授权, 怎么授权呢? spring-cloud-starter-security提供许多拦截器, 当你在登录的时候, 他就把你拦下来检查,看有没有登录信息, 如果没有就不给过, 在requestMapping上, 由于加了需要某某权限才能访问此方法, 于是又被拦下检查, 这次检查有没有需要的权限。</p>
+<h2 id="3-2-spring-cloud-starter-oauth2"><a href="#3-2-spring-cloud-starter-oauth2" class="headerlink" title="3.2 spring-cloud-starter-oauth2"></a>3.2 spring-cloud-starter-oauth2</h2><p>spring-cloud-starter-oauth2主要用来认证, 它只负责发放令牌, 你只要带着它要求的参数, 通过它给的路径去访问它, 他就给你一个令牌, 别的事他不管。</p>
+<p>OAuth 2 有四种授权模式，分别是授权码模式（authorization code）、简化模式（implicit）、密码模式（resource owner password credentials）、客户端模式（client credentials）。</p>
+<p>公司内部有很多个服务，可以专门提取出一个认证中心，这个认证中心就充当上面所说的权威认证平台的角色，所有的服务都要到这个认证中心做认证。</p>
+<p>对于多服务的平台，可以使用 OAuth2 实现服务的单点登录，只做一次登录，就可以在多个服务中自由穿行，当然仅限于授权范围内的服务和接口。</p>
+<p>配置最多的就是认证服务端，验证账号、密码，存储 token，检查 token ,刷新 token 等都是认证服务端的工作。</p>
+<p>spring-cloud-starter-oauth2包含了 spring-cloud-starter-security，所以不用再单独引入了。</p>
+<p>参考资料：</p>
+<p>code 参数换取 Token，access_token ，使用它，就可以去获取用户的资源了</p>
+<p><a href="https://www.cnblogs.com/xiaofengwang/p/11376881.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaofengwang/p/11376881.html</a></p>
+<p><a href="https://www.jianshu.com/p/a711ea5ad965" target="_blank" rel="noopener">https://www.jianshu.com/p/a711ea5ad965</a></p>
+<p><a href="https://blog.csdn.net/j754379117/article/details/70175198" target="_blank" rel="noopener">https://blog.csdn.net/j754379117/article/details/70175198</a></p>
+<p><a href="https://www.cnblogs.com/fengzheng/p/11724625.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengzheng/p/11724625.html</a></p>
+<p><a href="https://www.cnblogs.com/fengzheng/p/11810340.html" target="_blank" rel="noopener">https://www.cnblogs.com/fengzheng/p/11810340.html</a></p>
+<p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image021.png" alt="img"></p>
+<p>流程图中，包含四个角色。</p>
+<p>ResourceOwner为资源所有者，即为用户</p>
+<p>User-Agent为浏览器</p>
+<p>AuthorizationServer为认证服务器，可以理解为用户资源托管方，比如企业微信服务端</p>
+<p>Client为第三方服务</p>
+<p>调用流程为：</p>
+<p>A) 用户访问第三方服务，第三方服务通过构造OAuth2链接（参数包括当前第三方服务的身份ID，以及重定向URI），将用户引导到认证服务器的授权页</p>
+<p>B) 用户选择是否同意授权</p>
+<p>C) 若用户同意授权，则认证服务器将用户重定向到第一步指定的重定向URI，同时附上一个授权码。</p>
+<p>D) 第三方服务收到授权码，带上授权码来源的重定向URI，向认证服务器申请凭证。</p>
+<p>E) 认证服务器检查授权码和重定向URI的有效性，通过后颁发AccessToken（调用凭证）</p>
+<p><strong>D)**</strong>与E)<strong>**的调用为后台调用，不通过浏览器进行</strong></p>
+<h3 id="3-2-1-oauth中的角色"><a href="#3-2-1-oauth中的角色" class="headerlink" title="3.2.1 oauth中的角色"></a>3.2.1 oauth中的角色</h3><p><strong>client</strong>：调用资源服务器API的应用</p>
+<p><strong>Oauth</strong> 2.0 Provider：包括Authorization Server和Resource Server</p>
+<p>（1）<strong>Authorization Server</strong>：认证服务器，进行认证和授权</p>
+<p>（2）<strong>Resource Server</strong>：资源服务器，保护受保护的资源</p>
+<p><strong>user</strong>：资源的拥有者</p>
+<p><strong>Oauth 2.0 Provider**</strong>介绍**</p>
+<p><strong>Authorization Server:</strong></p>
+<p>（1）AuthorizationEndpoint:进行授权的服务，Default URL: /oauth/authorize</p>
+<p>（2）TokenEndpoint：获取token的服务，Default URL: /oauth/token</p>
+<p><strong>Resource Server</strong>:</p>
+<p>OAuth2AuthenticationProcessingFilter：给带有访问令牌的请求加载认证</p>
+<h3 id="3-2-2-Authorization-Server"><a href="#3-2-2-Authorization-Server" class="headerlink" title="3.2.2 Authorization Server"></a>3.2.2 Authorization Server</h3><p>1、  创建两个配置类，一个继承AuthorizationServerConfigurerAdapter，一个继承WebSecurityConfigurerAdapter。</p>
+<p>2、  主要的两种注解：</p>
+<p><strong>@EnableAuthorizationServer</strong>：声明一个认证服务器，当用此注解后，应用启动后将自动生成几个Endpoint：</p>
+<p>/oauth/authorize：验证</p>
+<p>/oauth/token：获取token</p>
+<p>/oauth/confirm_access：用户授权</p>
+<p>/oauth/error：认证失败</p>
+<p>/oauth/check_token：资源服务器用来校验token</p>
+<p>/oauth/token_key：如果jwt模式则可以用此来从认证服务器获取公钥</p>
+<p>以上这些endpoint都在源码里的endpoint包里面。</p>
+<p><strong>@Beans</strong>：需要实现AuthorizationServerConfigurer</p>
+<p><strong>AuthorizationServerConfigurer**</strong>包含三种配置：**</p>
+<p>ClientDetailsServiceConfigurer：client客户端的信息配置</p>
+<p>AuthorizationServerSecurityConfigurer：声明安全约束，哪些允许访问，哪些不允许访问</p>
+<p>AuthorizationServerEndpointsConfigurer：声明授权和token的端点以及token的服务的一些配置信息，比如采用什么存储方式、token的有效期等</p>
+<h3 id="3-2-3-授权码授权过程"><a href="#3-2-3-授权码授权过程" class="headerlink" title="3.2.3 授权码授权过程"></a>3.2.3 授权码授权过程</h3><p><img src="file:////Users/luxiqiang/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image023.png" alt="img"></p>
+<p>1.授权登录：用户打开第三方应用页面<strong>自动跳转</strong>到平台授权页面或者<strong>点击打开</strong>跳转到授权页面；<strong>不同平台有不同的授权页面地址</strong>。</p>
+<p>2.授权平台：跳转页面的传参appid、redirect_uri等参数进行验证，通过则返回授权提示页面。</p>
+<p>3.返回授权提示页面，提示用户授权的范围及应用，询问是否允许授权。</p>
+<p>4.用户点击允许授权第三方应用，申请分配code。</p>
+<p>5.向授权平台申请生成code，平台验证参数生成code。</p>
+<p>6.返回code并重定向到第三方应用链接（<strong>不同平台返回链接不一样</strong>）。</p>
+<p>7.返回第三方应用前端，第三方应用以Code向第三方服务端申请登录（带上授权平台属性）。</p>
+<p>8.第三方服务端以code向<strong>相应授权平台</strong>申请token。</p>
+<p>9.授权平台验证参数，返回token及时效信息。</p>
+<p>10.第三方服务端以token到<strong>相应平台</strong>取资源信息（用户信息）。</p>
+<p>11.返回资源信息，第三方服务端保存平台token及用户信息。</p>
+<p>12.第三方服务端进行登录操作并返回登录信息。</p>
+<p><strong>注：</strong></p>
+<p><strong>1、</strong> <strong>第2**</strong>、3<strong><strong>、4</strong></strong>、5<strong>**步可能存在合并的情况。</strong></p>
+<p><strong>2、</strong> <strong>第11**</strong>步用户信息，需要区分租户，保存用户信息及平台ID<strong><strong>，用户在平台上的ID</strong></strong>。**</p>
+<p><strong>3、</strong> <strong>第12**</strong>步在第三方登录授权** <strong>与</strong> <strong>平台授权区分，以及有效时间区分。</strong></p>
+<p><strong>4、</strong> <strong>第6**</strong>步重定向到第三方前端地址方便控制，也可重定到第三方服务端。**</p>
+<h1 id="4-Java基础知识"><a href="#4-Java基础知识" class="headerlink" title="4  Java基础知识"></a>4  Java基础知识</h1><h2 id="4-1-EnableAutoConfiguration"><a href="#4-1-EnableAutoConfiguration" class="headerlink" title="4.1 EnableAutoConfiguration"></a>4.1 EnableAutoConfiguration</h2><p>在一些扩展项目上，我们无法直接操作 spring 容器，可以通过 在任意src目录下添加 文件写入我们的 配置类，/META-INF/spring.factories</p>
+<p>键值为： org.springframework.boot.autoconfigure.EnableAutoConfiguration</p>
+<h2 id="4-2-Filter"><a href="#4-2-Filter" class="headerlink" title="4.2 Filter"></a>4.2 Filter</h2><p>　　Servlet过滤器Fileter是一个小型的web组件，它们通过拦截请求和响应，以便查看、提取或以某种方式操作客户端和服务器之间交换的数据，实现“过滤”的功能。Filter通常封装了一些功能的web组件，过滤器提供了一种面向对象的模块化机制，将任务封装到一个可插入的组件中， Filter组件通过配置文件来声明，并动态的代理。</p>
+<h2 id="4-3-Spring"><a href="#4-3-Spring" class="headerlink" title="4.3 Spring"></a>4.3 Spring</h2><p>控制反转IOC、依赖注入、容器管理对象的生命周期、反射机制。</p>
+<p>面向切面编程（AOP）框架、AspectJ、代理模式。</p>
+<p>Spring 中使用的对象都由 IoC 容器管理，不需要我们手动使用 new 运算符创建对象。由 IoC 容器管理的对象称为 Spring Bean，Spring Bean 就是 Java 对象，和使用 new 运算符创建的对象没有区别。</p>
+<p>Spring 通过读取 XML 或 Java 注解中的信息来获取哪些对象需要实例化。</p>
+<p><a href="http://c.biancheng.net/spring_boot/" target="_blank" rel="noopener">http://c.biancheng.net/spring_boot/</a></p>
+<h3 id="4-3-1-IOC"><a href="#4-3-1-IOC" class="headerlink" title="4.3.1 IOC"></a>4.3.1 IOC</h3><p>在传统的Java编程中，当需要用到某个对象的时候，我们都是主动显式创建一个对象实例（new）。使用Spring后就不需要这样做了，因为Spring会帮我们在需要用到某些对象的地方自动注入该对象，而无须我们自己去创建。这种模式俗称控制反转，即IOC（Inversion of Control）。</p>
+<p>@ComponentScan注解来扫描组件并注册，路径下所有被@Controller、@Service、@Repository和@Component注解标注的类都会被纳入IOC容器中。</p>
+<h3 id="4-3-2-注解"><a href="#4-3-2-注解" class="headerlink" title="4.3.2 注解"></a>4.3.2 注解</h3><p>@SpringBootApplication 来标注一个主程序类，说明这是一个Spring Boot应用，@SpringBootApplication是一个复合注解，包括@ComponentScan，@SpringBootConfiguration，@EnableAutoConfiguration。</p>
+<p>@RestController的意思就是controller里面的方法都以json格式输出。</p>
+<p>@Component将类添加进容器，@ConfigurationProperties配置文件中的数据注入到类中。</p>
+<p>@SpringBootConfiguration继承自@Configuration，二者功能也一致，标注当前类是配置类，并会将当前类内声明的一个或多个以@Bean注解标记的方法的实例纳入到srping容器中，并且实例名就是方法名。</p>
+<p>@EnableAutoConfiguration的作用启动自动的配置。</p>
+<p>@EnableAutoConfiguration注解的意思就是Springboot根据你添加的jar包来配置你项目的默认配置，比如根据spring-boot-starter-web，来判断你的项目是否需要添加了webmvc和tomcat，就会自动的帮你配置web项目中所需要的默认配置。</p>
+<p>@ComponentScan，扫描当前包及其子包下被@Component，@Controller，@Service，@Repository注解标记的类并纳入到spring容器中进行管理。</p>
+<p>@ResponseBody 表示该方法的返回结果直接写入HTTP response body中，一般在异步获取数据时使用，用于构建RESTful的api。在使用@RequestMapping后，返回值通常解析为跳转路径，加上@esponsebody后返回结果不会被解析为跳转路径，而是直接写入HTTP response body中。比如异步获取json数据，加上@Responsebody后，会直接返回json数据。该注解一般会配合@RequestMapping一起使用。</p>
+<p>@Controller 用于定义控制器类，在spring项目中由控制器负责将用户发来的URL请求转发到对应的服务接口（service层），一般这个注解在类中，通常方法需要配合注解@RequestMapping。</p>
+<p>@RestController用于标注控制层组件(如struts中的action)，@ResponseBody和@Controller的合集。</p>
+<p>@Service一般用于修饰service层的组件。</p>
+<p>@Repository 使用@Repository注解可以确保DAO或者repositories提供异常转译，这个注解修饰的DAO或者repositories类会被ComponetScan发现并配置，同时也不需要为它们提供XML配置项。</p>
+<p>@Bean用@Bean标注方法等价于XML中配置的bean。</p>
+<p>@Value注入Spring boot application.properties配置的属性的值。</p>
+<p>@PropertySource 如果将所有的配置都集中到 application.properties 或 application.yml 中，那么这个配置文件会十分的臃肿且难以维护，因此我们通常会将与 Spring Boot 无关的配置（例如自定义配置）提取出来，写在一个单独的配置文件中，并在对应的 JavaBean 上使用 @PropertySource 注解指向该配置文件。</p>
+<p>@ImportResource Spring Boot 中是不包含任何的 Spring 配置文件的，即使我们手动添加 Spring 配置文件到项目中，也不会被识别。那么 Spring Boot 项目中真的就无法导入 Spring 配置吗？答案是否定的。</p>
+<p>Spring Boot 为了我们提供了以下 2 种方式来导入 Spring 配置：</p>
+<p>使用 @ImportResource 注解加载 Spring 配置文件</p>
+<p>使用全注解方式加载 Spring 配置</p>
+<p><a href="https://www.cnblogs.com/aademeng/articles/11218079.html" target="_blank" rel="noopener">https://www.cnblogs.com/aademeng/articles/11218079.html</a></p>
+<h3 id="4-3-3-配置绑定"><a href="#4-3-3-配置绑定" class="headerlink" title="4.3.3 配置绑定"></a>4.3.3 配置绑定</h3><p>SpringBoot 提供了以下 2 种方式进行配置绑定：</p>
+<p>使用 @ConfigurationProperties 注解</p>
+<p>使用 @Value 注解</p>
+<p>只有在容器中的组件，才会拥有 SpringBoot 提供的强大功能。如果我们想要使用 @ConfigurationProperties 注解进行配置绑定，那么首先就要保证该对 JavaBean 对象在 IoC 容器中，所以需要用到 @Component 注解来添加组件到容器中。</p>
+<p>@PropertySource(value = “classpath:person.properties”)//指向对应的配置文件</p>
+<p>@Component</p>
+<p>@ConfigurationProperties(prefix = “person”)</p>
+<p>public class Person {</p>
+<p>@Value(“${person.lastName}”)</p>
+<p>private String lastName;</p>
+<p>yml 配置</p>
+<p>与 properties 文件类似，我们也可以添加 4 个配置文件：</p>
+<p>applcation.yml：默认配置</p>
+<p>application-dev.yml：开发环境配置</p>
+<p>application-test.yml：测试环境配置</p>
+<p>application-prod.yml：生产环境配置</p>
+<h3 id="4-3-4-Spring-Boot统一日志框架"><a href="#4-3-4-Spring-Boot统一日志框架" class="headerlink" title="4.3.4 Spring Boot统一日志框架"></a>4.3.4 Spring Boot统一日志框架</h3><p>SpringBoot 底层使用 slf4j+logback 的方式记录日志，当我们引入了依赖了其他日志框架的第三方框架（例如 Hibernate）时，只需要把这个框架所依赖的日志框架排除，即可实现日志框架的统一，示例代码如下。</p>
+<dependency>
+
+<p>  <groupid>org.apache.activemq</groupid></p>
+<p>  <artifactid>activemq-console</artifactid></p>
+<p>  <version>${activemq.version}</version></p>
+<hr>
+<p>​    ****</p>
+<p>​      <strong>commons-logging</strong></p>
+<p>​      <strong>commons-logging</strong></p>
+<p>​    ****</p>
+<hr>
+</dependency>
+
+
+
+<h3 id="4-3-5-Spring-Boot拦截器"><a href="#4-3-5-Spring-Boot拦截器" class="headerlink" title="4.3.5 Spring Boot拦截器"></a>4.3.5 Spring Boot拦截器</h3><p>定义拦截器</p>
+<p>在 Spring Boot 中定义拦截器十分的简单，只需要创建一个拦截器类，并实现 HandlerInterceptor 接口即可。</p>
+<p>注册拦截器</p>
+<p>创建一个实现了 WebMvcConfigurer 接口的配置类（使用了 @Configuration 注解的类），重写 addInterceptors() 方法，并在该方法中调用 registry.addInterceptor() 方法将自定义的拦截器注册到容器中。</p>
+<p>指定拦截规则</p>
+<p>在使用 registry.addInterceptor() 方法将拦截器注册到容器中后，我们便可以继续指定拦截器的拦截规则了。</p>
+<h3 id="4-3-6-数据源Druid"><a href="#4-3-6-数据源Druid" class="headerlink" title="4.3.6 数据源Druid"></a>4.3.6 数据源Druid</h3><p>Druid 是阿里巴巴推出的一款开源的高性能数据源产品，Druid 支持所有 JDBC 兼容的数据库，包括 Oracle、MySQL、SQL Server 和 H2 等等。Druid 不仅结合了 C3P0、DBCP 和 PROXOOL 等数据源产品的优点，同时还加入了强大的监控功能。通过 Druid 的监控功能，可以实时观察数据库连接池和 SQL 的运行情况，帮助用户及时排查出系统中存在的问题。</p>
+<h3 id="4-3-7-Spring-AOP：基于AspectJ注解开发"><a href="#4-3-7-Spring-AOP：基于AspectJ注解开发" class="headerlink" title="4.3.7 Spring AOP：基于AspectJ注解开发"></a>4.3.7 Spring AOP：基于AspectJ注解开发</h3><p>AOP底层为动态代理，AOP指的是：在程序运行期间动态地将某段代码切入到指定方法指定位置进行运行的编程方式，相关设计模式为代理模式。面向切面编程（AOP）框架、AspectJ、代理模式。</p>
+<p><strong>定义切面@Aspect</strong></p>
+<p>@Aspect</p>
+<p>public class AspectModule {</p>
+<p><strong>定义切入点@Pointcut</strong></p>
+<p>// 要求：方法必须是private，返回值类型为void，名称自定义，没有参数</p>
+<p>@Pointcut(“execution(<em>net.biancheng..</em>.*(..))”)</p>
+<p>private void myPointCut() {</p>
+<p>}</p>
+<p><strong>定义通知advice</strong></p>
+<p>@AspectJ 支持 5 种类型的 advice，以下为使用 @Before 的示例。</p>
+<p>@Before(“myPointCut()”)</p>
+<p>public void beforeAdvice(){</p>
+<h3 id="4-3-8-事务"><a href="#4-3-8-事务" class="headerlink" title="4.3.8 事务"></a>4.3.8 事务</h3><p>事务具有以下 4 个特性，即原子性、一致性、隔离性和持久性，这 4 个属性称为 ACID 特性。</p>
+<p>原子性（Atomicity）：一个事务是一个不可分割的工作单位，事务中包括的动作要么都做要么都不做。</p>
+<p>一致性（Consistency）：事务必须保证数据库从一个一致性状态变到另一个一致性状态，一致性和原子性是密切相关的。</p>
+<p>隔离性（Isolation）：一个事务的执行不能被其它事务干扰，即一个事务内部的操作及使用的数据对并发的其它事务是隔离的，并发执行的各个事务之间不能互相打扰。</p>
+<p>持久性（Durability）：持久性也称为永久性，指一个事务一旦提交，它对数据库中数据的改变就是永久性的，后面的其它操作和故障都不应该对其有任何影响。</p>
+<h3 id="4-3-9-java的反射机制"><a href="#4-3-9-java的反射机制" class="headerlink" title="4.3.9 java的反射机制"></a>4.3.9 java的反射机制</h3><p>Java语言允许通过程序化的方式间接对Class的对象实例操作，Class文件由类装载器装载后，在JVM中将形成一份描述Class结构的元信息对象，通过该元信息对象可以获知Class的结构信息：构造函数、属性和方法等。Java允许用户借由这个Class相关的元信息对象间接调用Class对象的功能.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/">
+                <span class="level-item">bpmn流程模式</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="卢希强">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        卢希强
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        90后青年
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>湖北武汉</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        12
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/luxiqiang" target="_blank">
+                关注我</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/luxiqiang">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="微服务知识体系">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-27T02:21:45.000Z">2021-09-27</time></div>
+                    <a href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" class="title has-link-black-ter is-size-6 has-text-weight-normal">微服务知识体系</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="bpmn流程模式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-18T09:12:12.000Z">2021-09-18</time></div>
+                    <a href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">bpmn流程模式</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="工作流设计">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-17T06:57:23.000Z">2021-09-17</time></div>
+                    <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">工作流设计</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo搭建流程">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-16T03:42:31.000Z">2021-09-16</time></div>
+                    <a href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo搭建流程</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/16/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="工作流程引擎">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-16T03:07:54.000Z">2021-09-16</time></div>
+                    <a href="/2021/09/16/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E/" class="title has-link-black-ter is-size-6 has-text-weight-normal">工作流程引擎</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="微服务知识体系">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-27T02:21:45.000Z">2021-09-27</time></div>
+                    <a href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" class="title has-link-black-ter is-size-6 has-text-weight-normal">微服务知识体系</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="bpmn流程模式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-18T09:12:12.000Z">2021-09-18</time></div>
+                    <a href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">bpmn流程模式</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="工作流设计">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-17T06:57:23.000Z">2021-09-17</time></div>
+                    <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">工作流设计</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo搭建流程">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-16T03:42:31.000Z">2021-09-16</time></div>
+                    <a href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo搭建流程</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/16/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="工作流程引擎">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-16T03:07:54.000Z">2021-09-16</time></div>
+                    <a href="/2021/09/16/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E/" class="title has-link-black-ter is-size-6 has-text-weight-normal">工作流程引擎</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="微服务知识体系" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2021 卢希强&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+<script src="/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="回到顶端" href="javascript:;" target="_blank" rel="noopener">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
