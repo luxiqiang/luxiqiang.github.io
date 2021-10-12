@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.0.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>BIM介绍 - luxq blog</title>
+
+
+    <meta name="description" content="什么是BIM? 进入2017年以后，一个被称之为“BIM”的新事物出现在中国的建筑业中，瞬时间所有的施工企业都面临着接触BIM的挑战。 BIM是源自于“Building Information Modeling”的缩写，中文译为“建筑信息模型”。该技术通过数字化手段，在计算机中建立出一个虚拟建筑，该虚拟建筑会提供一个单一、完整、包含逻辑关系的建筑信息库。需要注意的是，在这其中“信息”的内涵不仅仅是">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BIM介绍">
+<meta property="og:url" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;2021&#x2F;10&#x2F;12&#x2F;BIM%E4%BB%8B%E7%BB%8D&#x2F;index.html">
+<meta property="og:site_name" content="luxq blog">
+<meta property="og:description" content="什么是BIM? 进入2017年以后，一个被称之为“BIM”的新事物出现在中国的建筑业中，瞬时间所有的施工企业都面临着接触BIM的挑战。 BIM是源自于“Building Information Modeling”的缩写，中文译为“建筑信息模型”。该技术通过数字化手段，在计算机中建立出一个虚拟建筑，该虚拟建筑会提供一个单一、完整、包含逻辑关系的建筑信息库。需要注意的是，在这其中“信息”的内涵不仅仅是">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2021-10-12T10:58:05.564Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;luxiqiang.github.io&#x2F;images&#x2F;og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="BIM介绍" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">主页</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;" target="_blank" rel="noopener">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-10-12T09:27:11.000Z">2021-10-12</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 小时 读完 (大约 9618 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                BIM介绍
+            
+        </h1>
+        <div class="content">
+            <p>什么是BIM?</p>
+<p>进入2017年以后，一个被称之为“BIM”的新事物出现在中国的建筑业中，瞬时间所有的施工企业都面临着接触BIM的挑战。</p>
+<p>BIM是源自于“Building Information Modeling”的缩写，中文译为“建筑信息模型”。该技术通过数字化手段，在计算机中建立出一个虚拟建筑，该虚拟建筑会提供一个单一、完整、包含逻辑关系的建筑信息库。需要注意的是，在这其中“信息”的内涵不仅仅是几何形状描述的视觉信息，还包含大量的非几何信息，如材料的耐火等级和传热系数、构件的造价和采购信息等等。其本质是一个按照建筑直观物理形态构建的数据库，其中记录了各阶段的所有数据信息。建筑信息模型（BIM）应用的精髓在于这些数据能贯穿项目的整个寿命期，对项目的建造及后期的运营管理持续发挥作用。</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874430.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>BIM基本特性</p>
+<p>BIM是以建筑工程项目的各项相关信息数据为基础而建立的建筑模型。通过数字信息仿真，模拟建筑物所具有的真实信息。BIM是以从设计、施工到运营协调、项目信息为基础而构建的集成流程，它具有可视化、协调性、模拟性、优化性和可出图性5大特点。建筑公司通过使用BIM，可以在整个流程中将统一的信息创新、设计和绘制出项目，还可以通过真实性模拟和建筑可视化来更好地沟通，以便让项目各方了解工期、现场实时情况、成本和环境影响等项目基本信息。</p>
+<p><strong>(一) 可视化</strong></p>
+<p>可视化，即“所见即所得”的形式，对于建筑行业来说，可视化真正运用在建筑业地作用非常大。例如，经常拿到的施工图纸只是各个构件的信息，在图纸上以线条绘制表达，但是真正的构造形式就需要建筑业人员去自行想象了。如果建筑结构简单，那么没有太大的问题，但是近几年形式各异、复杂造型的建筑不断推出，那么光靠想象就不太实际了。所以BIM提供了可视化的思路，将以往的线条式的构件，形成一种三维的立体实物图形展示在人们的面前。</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874438.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>以前，建筑业也会制作设计方面的效果图，但是这种效果图是分包给专业的效果图制作团队，根据线条式信息识读设计制作出来的，并不是通过构件的信息自动生成的，因此缺少了同构件之间的互动性和反馈性。而BIM提到的可视化，则是一种能够同构件之间形成互动性和反馈性的可视化。在BIM建筑信息模型中，由于整个过程都是可视的，所以可以用于效果图的展示和报表的生成。更重要的是通过建筑可视化，可以在项目的设计、建造和运营过程中进行沟通、讨论和决策。</p>
+<p><strong>(二) 协调性</strong></p>
+<p>协调性是建筑业中的重点内容，无论是施工单位和设计单位还是业主，都在做着协调及相互配合的工作。一旦在项目的实施过程中遇到了问题，就需要各相关人员组织起来进行协调会议，找出施工中问题发生的原因及解决办法，然后做出相应变更、补救措施等来解决问题。那么，问题的协调就只能等出现问题后再进行协调吗?在设计时，由于各专业设计师之间的沟通不到位，往往会出现各种专业之间的碰撞问题，例如，在对暖通(供热、供燃气、通风及空调工程)等专业中的管道进行布置时，可能遇到构件阻碍管线的布置。这种问题是施工中常遇到的碰撞问题，而BIM的协调性服务，可以帮助处理这种问题，也就是说BIM建筑信息模型可在建筑物建造前期，对各专业的碰撞问题进行协调，生成并提供出协调数据。当然，BIM的协调作用也不止应用于解决各专业间的碰撞问题，它还可以解决电梯井布置与其他设计布置及净空要求的协调、防火分区与其他设计布置的协调以及地下排水布置与其他设计布置的协调等问题。</p>
+<p><strong>(三) 模拟性</strong></p>
+<p>BIM的模拟性并不是只能模拟、设计出建筑物的模型，还可以模拟难以在真实世界中进行操作的事件。在设计阶段，BIM可以对设计上需要进行模拟的一些事件进行模拟实验，例如，节能模拟、紧急疏散模拟、日照模拟和热能传导模拟等。在招投标和施工阶段可以进行4D模拟(3D模型加项目的发展时间)，也就是根据施工的组织设计模拟实际施工，从而确定合理的施工方案。同时还可以进行5D模拟(基于3D模型的造价控制)，从而实现成本控制。在后期运营阶段，还可以进行日常紧急情况处理方式的模拟，如地震人员逃生模拟和消防人员疏散模拟等。</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874447.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p><strong>(四) 优化性</strong></p>
+<p>事实上，整个设计、施工和运营的过程就是一个不断优化的过程，在BIM的基础上，可以更好地进行优化。优化通常受信息、复杂程度和时间的制约。准确的信息影响优化的最终结果，BIM模型提供了建筑物的实际存在的信息，包括几何信息、物理信息以及规则信息。对于高度复杂的项目，由于参与人员本身的原因，往往无法掌握所有的信息，因此需要借助一定的科学技术和设备的帮助。现代建筑物的复杂程度大多超过参与人员本身的能力极限，BIM及与其配套的各种优化工具提供了对复杂项目进行优化的服务。</p>
+<p>基于BIM的优化，可以完成以下两种任务：</p>
+<p>第1种：对项目方案的优化。把项目设计和投资回报分析结合起来，可以实时计算出设计变化对投资回报的影响。这样业主对设计方案的选择就不会停留在对形状的评价上，而是哪种项目设计方案更有利于自身的需求。</p>
+<p>第2种：对特殊项目的设计优化。在大空间随处可看到异型设计，如裙楼、幕墙和屋顶等。这些内容看似占整个建筑的比例不大，但是占投资和工作量的比例却往往很大，而且通常是施工难度较大和施工问题较多的地方，对这些内容的设计施工方案进行优化，可以显著地改善工期和造价。</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874449.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p><strong>(五) 可出图性</strong></p>
+<p>使用BIM绘制的图纸，不同于建筑设计院所设计的图纸或者一些构件加工的图纸，而是通过对建筑物进行可视化展示、协调、模拟和优化以后，绘制出的综合管线图（经过碰撞检查和设计修改，消除了相应错误）、综合结构留洞图（预埋套管图）以及碰撞检查侦错报告和建议改进方案。</p>
+<p>BIM与工程造价的交流</p>
+<p><strong>（一）BIM对造价的影响</strong></p>
+<p>BIM对于造价来说很有可能会改变造价的整个工作流程，包括造价员的整个工作思维模式，传统的造价工作模式是：识图→算量（目前是软件提量+手工算量）→套项→调整材料价、调整取费，完成造价。这样一个过程有很多重复的工作，并且很多环节是需要大量的人工劳动力来解决造价中遇到的复杂问题，在可研、设计、招标、施工阶段需要重复计算不同阶段的造价。这样的工作模式势必会增加很多额外的成本，尤其后期设计中的变更修改阶段，每一次修改都需要重新核对一下图纸的改变程度，在传统的单机单专业的工作方式，很多设计修改不会被造价人员做发现，这样的造价计算肯定会和实际的清单会有很多误差。而基于BIM下的造价可以在不同阶段计算不同阶段的造价清单，只要模型建立的足够精细就可以得到十分精准的造价信息。</p>
+<p>工程造价分为三个部分，算量问题，组价问题和合同问题。现阶段来看，BIM技术的普及对工程造价的冲击主要局限于算量问题上。BIM作为应用软件，更加简化了工程量的计算，使造价师从算量的繁琐工作中脱离出来，大量减少了计算工作，将更多的目光放在组价和合同问题上。</p>
+<p>另外BIM技术使各阶段数据无缝对接，实现全过程、全要素可靠、准确地工程造价管理。这在一定程度上打破了之前由于各阶段数据不连续，各环节之间协同共享存在障碍，导致工程信息不透明，致使工程项目”水深“现象。</p>
+<p><strong>(二) BIM是否会取代造价</strong></p>
+<p>前面提到，BIM的普及，会让造价师的目光更多的集中在组价和合同问题上。对于价格，合同，建设工程前后的费用控制，相关法律和规章是以工程经验积累起来的。技术软件再万能，在没有标准可循的组价、合同法律法规的理解等方面也不能和人脑比拼。当工程量不需要计算的时候，造价师会更有精力去做成本控制等一些控制造价的核心内容。所以BIM只能技术给造价师提供更宽、更高的职业空间。</p>
+<p>在国外，工料测量师被业主称为“费用经理”。他们的业务不止于单一环节的“计价”、“造价”，更在于全过程“控价”。从工程量预测，到投标招标决策；从工程可行性判断，到工程成本管理，工料测量师都可以从经济角度予以解决方案。反观国内造价师，“造价”二字当顶，已经明示其本职。目前国内造价师的工作也确实以算量、套价为主，很少实现全过程成本管控。</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874442.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>所以未来造价工程师的咨询业务很可能会改变，不再是单一的造价内容，而是关注于工程项目全过程的成本管控咨询。但是BIM业务也不会完全取代造价业务，原因如下：</p>
+<p>BIM即便发展到人工智能的程度，始终不如人懂得其他人的“心理活动”，对敏感性问题完全无能。 建设工程是为人服务的。人有种种立场和差异化感受。用户与用户之间，企业与企业之间，社会与社会之间，甚至这三者之间，追求往往不那么一致。用户体验、造价规范与工程效益的同步协调，涉及种种微妙的利害权衡。国内的工程造价，不仅是经济账，也是心理战。</p>
+<p>更实时更适配的BIM算法始终依赖人的输入。BIM计算实质是工程经验的数据化，但实际的工程实践不是BIM模型所能实现的。所以工程经验数据化的进度和精度取决于人对工程的理解。</p>
+<p><strong>(三)BIM如何运用于造价工作</strong></p>
+<p>以BIM模型为基础按照BIM建筑模型的各个构件自动挂接上对应的清单和定额，这样就可以实时的计算出造价清单，如果模型有变更修改也可以在造价中有所体现，真的达到一处修改实时计量的工作模式。这样不但提高了算量的工作效率而且还提高了清单精确度，并且在BIM模型中我们可以批量修改、多工程链接、可视化操作等一系列手段来灵活的完成我们的工作任务，BIM以全新的协同工作方式代替传统的单机工作模式。</p>
+<p>但是从行业的角度来看，我们造价工作者不应该局限本专业的范围，我们在头脑应该有一个BIM宏观的概念，首先了解BIM在整个建筑生命周期都能做什么，其次是掌握造价行业的新软件新技术，头脑中一定要时刻建立一个模型化、协同化的思维模式。</p>
+<p>BIM作为工具，它的存在是简便造价师的工作量。也纠正了一直以来造价师应该把握的方向：造价师不是算量员，他们的存在是为了更好的进行工程成本控制。BIM本身并不能成为解决方案，也不能发挥作用，真正的解决方案是行业从业人员充分挖掘和利用BIM价值更好、更快完成工程任务。BIM简化了造价师的重复算量工作，为造价师的发展提供了更宽、更高的空间！</p>
+<p><img src="http://p3.pstatp.com/large/434a00039461d870c412" alt="BIM图文全解！十分钟了解BIM"></p>
+<p><strong>(四)造价过程中BIM应用难点</strong></p>
+<p>组织层面</p>
+<p>首先从企业战略上来讲，企业的规模和性质不同会导致应用 BIM 的目标有所差异，比如万达集团等大型企业采取整套开发散售模式、融合开发和经营的方式，此种背景下以全生命周期制定企业 BIM 应用目标。企业不同的定位导致 BIM 技术应用目标上有所不同，进而对企业信息需求、期望功能等产生影响，所以，企业应当充分考虑自身的定位和性质，然后制定企业发展战略。</p>
+<p>其次，从制度上来讲，企业制定制度是为了约束员工行为，从而保证工作的顺利开展。应用 BIM 技术时会增加企业的资金压力，一方面传统工作方式和新型 BIM 管理模式的交替会短期增加企业成本；另一方面，新技术利用率低致使新旧工作方式重叠造成资源重复消耗，增加企业资金负担。此外，BIM 技术对技术人员有着较高的要求，企业需要在人员上投入更多的资金。</p>
+<p>此外，从项目管理角度看，BIM 技术在全生命周期中不同阶段需要建立相应的方法，当前在国内企业项目管理中各个阶段和专业之间并没有做好良好的沟通，所以信息缺乏，难以实现统筹管理，导致 BIM 技术应用出现障碍。</p>
+<p>技术方法</p>
+<p>\1. 工作流程的制约。企业造价管理包括设计阶段、施工阶段、工程变更等诸多方面因素的内容，在不同的阶段造价管理侧重点也不同，比如策划期需要做好估算，设计图纸期需要做好预算工作等。目前很多企业都需要依靠设计单位设计出相关的 BIM 模型来实现企业造价的管理，但是在造价管理工作流程中有很多有待完善之处。我国要求造价结果由造价人员完全负责，而造价人员需要在 BIM 早期设计中和设计人员共同完成构件信息的定义，但是目前我国很多企业没有做到这一点。在 BIM 技术应用中，需要根据设计阶段模型创建施工图预算，进而得到投标清单，在这项工作中需要投入大量的时间和经历，导致很多企业对此技术的应用望而却步。</p>
+<p>\2. 造价软件和 BIM 软件信息不对称。不同类型的企业对构件信息有着不同的要求，导致 BIM 软件模型设计和应用具有一定的不同之处。目前 BIM 软件中缺乏对施工工艺、部件、清单计算规范要求的考虑，没有有效将材料、工艺做出分类，最终导致 BIM 在应用中出现不同程度的问题，所以，为了实现 BIM 技术在造价管理中的应用，应当充分考虑其中的差异。</p>
+<p>\3. 知识产权问题。BIM 技术的应用还会涉及到知识产权问题，设计人员需要在 BIM 技术设计中对模型进行搭建和确认。创建完的 BIM 模型含有丰富的信息资源，但是如何合理有效地使用成为了一项难以把握的工作。BIM 模型在使用中有的操作、变更等工作都需要专门的人员完成，导致项目各阶段 BIM 难以形成链条，阻碍了该技术的推广和应用。</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874444.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>经济方面</p>
+<p>从经济方面来讲，BIM 技术的应用出现障碍主要可以体现在三个方面，第一，政府缺乏相应的机理政策，企业财政收支上存在问题。虽然国家认可并推广该技术的应用，但是目前政府并没有发布关于 BIM 技术应用的相关标准要求，也就是说法律法规有所欠缺。第二，企业的经济压力，上文已经提到过企业在应用 BIM 技术是需要承担的经济压力，这是阻碍 BIM 技术应用的一大原因。第三，BIM 应用结果受到内部技术人员激励政策的影响。管理者确定了决策后需要技术人员实现，中国社会在事物认知、处理等方面和 BIM 精细化和数据化管理的理念存在较大的差异，所以需要考虑激励政策的合理应用。</p>
+<p>BIM模型的构架</p>
+<p>BIM模型（Building Information Model）是设施所有信息的数字化表达，是一个可以作为设施虚拟替代物的信息化电子模型，是共享信息的资源，也是Building Information Modeling和Building Information Management的基础。</p>
+<p>人们常以为BIM模型是一个单一的模型，但到了实际操作层面，由于项目所处的阶段不同、专业分工不同、实现目标不同等多种原因，项目的不同参与方还必须拥有各自的模型，例如场地模型、建筑模型、结构模型、设备模型、施工模型、竣工模型等。这些模型是从属于项目总体模型的子模型，但规模比项目的总体模型要小。</p>
+<p><img src="http://p3.pstatp.com/large/434a00039463449e9d91" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>所有的子模型都是在同一个基础模型上生成的，这个基础模型包括了建筑物最基本的构架：场地的地理坐标与范围、柱、梁、楼板、墙体、楼层、建筑空间等，而专业的子模型就是在基础模型的上面添加各自的专业构件形成的，这里专业子模型与基础模型的关系就相当一个引用与被引用的关系，基础模型的所有信息被各个子模型共享。</p>
+<p>BIM生态系统</p>
+<p>BIM应用是与计算机和网络系统密切相关的，如何从软硬件的角度搭建起BIM应用系统的框架是BIM应用的必要条件，但是无论从纵向的全生命周期来说，还是横向的各行各业的项目参与方来说，BIM应用的广泛性都给BIM系统应用框架的搭建提出了很高的要求，必须保证在设施全生命周期中的BIM应用充分实现信息交换。目前建筑业的信息表达与交换的国际标准技术是IFC标准，如何在系统中直接传递、交换IFC数据，那就需要设置一个BIM服务器，BIM服务器与BIM知识库一起组成一个以IFC格式为网络的数据集成与应用平台。</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874457.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>用户进行相关应用时可通过BIM服务器提取所需的信息，同时也可以对模型中的信息进行扩展，然后将扩展的模型信息重新提交给服务器，这样就实现了BIM数据的存储、管理、交换和应用。再进一步，如果BIM服务器实现以集成BIM为基础，就可以实现对象级别的数据管理以及权限配置，能支持多用户协作和同步修改。</p>
+<p>BIM全周期实施规划</p>
+<p>采用BIM技术，不仅可以实现设计阶段的协同设计，施工阶段的建造全过程一体化和运营阶段对建筑物的智能化维护和设施管理，同时还能打破从业主到设计、施工运营之间的隔阂和界限，实现对建筑的全寿命周期管理。</p>
+<p>在2010年美国宾夕法尼亚州立大学的计算机集成化施工研究组经研究写成的《BIM项目实施计划指南》第二版中，发表了【BIM技术的25种常见的应用图】，如下：</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F151358744510.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>这25种应用跨越了设施全生命周期的四个阶段，即规划阶段（项目前期策划阶段）、设计阶段、施工阶段、运营阶段。我国通过借鉴上述对BIM应用的分类框架，结合目前国内事实现状，归纳得出【项目四阶段中的20种BIM典型应用】，如下：</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874450.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>建筑业的工序在国内外实质上大同小异，BIM的应用也是如此，但有些应用二者的划分尺度不一样，如前者的“3D协调”与后者的“管线综合”类似，但后者的描述过于狭窄，好像仅限于管线的碰撞分析，而结构梁柱引起的净空高度不够等其他构建协调优化问题就不管了，所以前者的描述较为全面。</p>
+<p>以下就项目前期策划阶段、设计阶段、施工阶段和运营阶段中BIM的应用进行一个概括性介绍：</p>
+<p><strong>(一) 项目前期策划阶段</strong></p>
+<p>项目前期策划阶段对整个建筑工程项目的影响很大，美国HOK建筑师事务所麦克利米曾提出著名的麦克利米曲线图：</p>
+<p><img src="http://cdn-ali.aecichina.com/qiniu/ueditor%2F15135874459.png" alt="BIM图文全解！十分钟了解BIM"></p>
+<p>图表表明在项目前期的优化对于项目的成本和功能影响是最大的，而优化设计的费用是最低的；而在项目后期优化对于成本和功能影响在逐渐变小，而优化设计的费用却逐步增高。出于上述原因，在项目的前期应当尽早应用BIM技术。</p>
+<p>BIM技术应用在项目前期的工作有很多，包括现状建模与模型维护、场地分析、成本估算、阶段规划、规划编制、建筑策划等。</p>
+<p>投资估算</p>
+<p>应用BIM系统强大的信息统计功能，在方案阶段可运用数据指标等方法获得较为准确的土建工程量及土建造价，同时可用于不同方案的对比，可以快速得出成本的变动情况，权衡出不同方案的造价优劣，为项目决策提供重要而准确的依据。BIM技术可运用计算机强大的数据处理能力进行投资估算，这大大减轻了造价工程师的计算工作量，造价工程师可节省时间从事更有价值的工作如确定施工方案、评估风险等，进一步能细致考虑施工中许多节约成本等专业问题，这些对于编制高质量的预算来说非常重要。</p>
+<p>现状模型</p>
+<p>根据现有的资料把现状图纸导入到基于BIM技术的软件中，创建出道路、建筑物、河流、绿化以及高程的变化起伏，并根据规划条件创建出本地块的用地红线及道路红线，并生成面积指标。</p>
+<p>总图规划</p>
+<p>在现状模型的基础上根据容积率、绿化率、建筑密度等建筑控制条件创建工程的建筑体块各种方案，创建体量模型。做好总图规划、道路交通规划、绿地景观规划、竖向规划以及管线综合规划。</p>
+<p>环境评估</p>
+<p>根据项目的经纬度，借助相关的软件采集此地的太阳及气候数据，并基于BIM模型数据利用相关的分析软件进行气候分析，对方案进行环境影响评估，包括日照环境影响、风环境影响、热环境影响、声环境影响等评估。某些项目还需要进行交通影响模拟。</p>
+<p><strong>(二) 设计阶段</strong></p>
+<p>BIM在建筑设计的应用范围非常广泛，无论在设计方案论证，还是在设计创作、协同设计、建筑性能分析、结构分析，以及在绿色建筑评估、规范验证、工程量统计等许多方面都有广泛的应用。</p>
+<p>设计方案论证</p>
+<p>BIM三维模型展示的设计效果十分方便评审人员、业主对方案进行评估，甚至可以就当前设计方案讨论施工可行性以及如何削减成本、缩短工期等问题，可最修改方案提供切实可行的方案。由于是用可视化方式进行，可获得来自最终用户和业主的积极反馈，使决策的时间大大减少，促成共识。</p>
+<p>设计创作</p>
+<p>由于在BIM软件中组成整个设计的就是门、窗、墙体等单个3D构件元素，则设计过程就是不断确定和修改各种构件的参数，而这些建筑构件在软件中是数据关联、智能互动的。而最终设计成果的交付就是BIM模型，所有平、立、剖二维图纸都可以根据模型随意生成，由于图纸来源都是同一个BIM模型，所以所有图纸和图表数据都是互相关联的，也是实时互动的，从根本上避免了不同视图不同专业图纸出现的不一致现象。</p>
+<p>协同设计</p>
+<p>BIM技术使不同专业的甚至是身处异地的设计人员都能够通过网络在同一个BIM 模型上展开协同设计，使设计能够协调进行。以往各专业各视角之间不协调的事情时有发生，即使花费了大量人力物力对图纸进行审查仍然不能把不协调的问题全部改正。有些问题到了施工过程才能发现，给材料、成本、工期造成了很大的损失。应用BIM技术以及BIM服务器，通过协同设计和可视化分析就可以及时解决上述设计中的不协调问题，保证了后期施工的顺利进行。</p>
+<p>绿色建筑评估</p>
+<p>BIM模型中包含了用于建筑性能分析的各种数据，只要数据完备，将数据通过IFC、gbXML等交换格式输入到相关的分析软件中，即可进行当前项目的节能分析、采光分析、日照分析、通风分析以及最终的绿色建筑评估。</p>
+<p>工程量统计</p>
+<p>BIM模型信息的完备性大大简化了设计阶段对工程量的统计工作，模型的每个构件都和BIM数据库的成本库相关联，当设计师在对构件进行变更时，成本估算都会实时更新。</p>
+<p>在用二维CAD技术进行设计时，绘图的工作量很大，设计师无法花很多时间对设计方案进行静心推敲。应用BIM技术，只要完成了设计构想，确定了BIM模型的最后构成，马上就可以根据模型生成各种施工图，而且由于BIM技术的协调性，后期调整设计的工作量是很小的，这样设计质量和图纸质量都得到了保障。</p>
+<p><strong>(三) 施工阶段</strong></p>
+<p>BIM技术在施工阶段可以有如下多个方面的应用：3D协调/管线综合、支持深化设计、场地使用规划、施工系统设计、施工进度模拟、施工组织模拟、数字化建造、施工质量与进度监控、物料跟踪等。</p>
+<p>碰撞综合协调</p>
+<p>在施工开始前利用BIM模型的可视化特性对各个专业（建筑、结构、给排水、机电、消防、电梯等）的设计进行空间协调，检查各个专业管道之间的碰撞以及管道与结构的碰撞。如发现碰撞及时调整，这样就较好地避免施工中管道发生碰撞和拆除重新安装的问题。</p>
+<p>施工方案分析</p>
+<p>在BIM模型上对施工计划和施工方案进行分析模拟，充分利用空间和资源整合，消除冲突，得到最优施工计划和方案。特别是对于新形式、新结构、新工艺和复杂节点，可以充分利用BIM的参数化和可视化特性对节点进行施工流程、结构拆解、配套工器具等角度的分析模拟，可以改进施工方案实现可施工性，以达到降低成本、缩短工期、减少错误和浪费的目的。</p>
+<p>数字化建造</p>
+<p>数字化建造的前提是详尽的数字化信息，而BIM模型的构件信息都以数字化形式存储。例如像数控机床这些用数字化建造的设备需要的就是描述构件的数字化信息，这些数字化信息为数控机床提供了构件精确的定位信息，为建造提供了必要条件。</p>
+<p>施工科学管理</p>
+<p>通过BIM技术与3D激光扫描、视频、图片、GPS、移动通讯、RFID（二维码等射频识别技术）、互联网等技术的集成，可以实现对现场的构件、设备以及施工进度和质量的实时跟踪。另外通过BIM技术和管理信息系统的集成，可以有效支持造价、采购、库存、财务等的动态精确管理，减少库存开支，在竣工时可以生成项目竣工模型和相关文件，有利于后续的运营管理。并且业主、设计方、预制厂商、材料供应商等可利用BIM模型的信息集成化与施工方进行沟通，提高效率减少错误。</p>
+<p>总的来说，应用BIM技术可以为建筑施工带来新的面貌。</p>
+<p><strong>(四) 运营阶段</strong></p>
+<p>在运营维护阶段BIM可以有如下这些方面的应用：竣工模型交付；维护计划；建筑系统分析；资产管理；空间管理与分析；防灾计划与灾害应急模拟。</p>
+<p>竣工模型交付与维护计划：施工方竣工后对BIM模型进行必要的测试和调整再向业主提交，这样运营维护管理方得到的不只是设计和竣工图纸，还能得到反映真实状况的BIM模型，里面包含了施工过程记录、材料使用情况、设备的调试记录以及状态等资料。BIM能将建筑物空间信息、设备信息和其他信息有机地整合起来，结合运营维护管理系统可以充分发挥空间定位和数据记录的优势，合理制定运营、管理、维护计划，尽可能降低运营过程中的突发事件。</p>
+<p>资产管理</p>
+<p>通过BIM建立维护工作的历史纪录，可以对设施和设备的状态进行跟踪，对一些重要设备的适用状态提前预判，并自动根据维护记录和保养计划提示到期需保养的设备和设施，对故障的设备从派工维修到完工验收、回访等均进行记录，实现过程化管理。另外如果基于BIM的资产管理系统能和诸如停车场管理系统、智能监控系统、安全防护系统等物联网结合起来，实行集中后台控制与管理，则能很好地解决资产的实时监控、实时查询和实时定位，并且实现各个系统之间地互联、互通和信息共享。</p>
+<p>防灾模拟</p>
+<p>基于BIM模型丰富的信息，可以将模型以IFC等交换格式导入灾害模拟分析软件，分析灾害发生的原因，制定防灾措施与应急预案。灾害发生后，将BIM模型以可视化方式提供给救援人员，让救援人员迅速找到合适救灾路线，提高救灾成效。</p>
+<p>空间管理</p>
+<p>应用BIM技术可以处理各种空间变更的请求，合理安排各种应用的需求，并记录空间的使用、出租、退租的情况，实现空间的全过程管理。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
+
+<div class="notification is-danger">
+    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+                
+<div class="notification is-danger">
+    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
+</div>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">
+                <span class="level-item">微服务知识体系</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="卢希强">
+                    </figure>
+                    
+                    <p class="is-size-4 is-block">
+                        卢希强
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        90后青年
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>湖北武汉</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        13
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分类
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        标签
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/luxiqiang" target="_blank">
+                关注我</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/luxiqiang">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            链接
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                分类
+            </h3>
+            <ul class="menu-list">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2021/10/12/BIM%E4%BB%8B%E7%BB%8D/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="BIM介绍">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-10-12T09:27:11.000Z">2021-10-12</time></div>
+                    <a href="/2021/10/12/BIM%E4%BB%8B%E7%BB%8D/" class="title has-link-black-ter is-size-6 has-text-weight-normal">BIM介绍</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="微服务知识体系">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-27T02:21:45.000Z">2021-09-27</time></div>
+                    <a href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" class="title has-link-black-ter is-size-6 has-text-weight-normal">微服务知识体系</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="bpmn流程模式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-18T09:12:12.000Z">2021-09-18</time></div>
+                    <a href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">bpmn流程模式</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="工作流设计">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-17T06:57:23.000Z">2021-09-17</time></div>
+                    <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">工作流设计</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo搭建流程">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-16T03:42:31.000Z">2021-09-16</time></div>
+                    <a href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo搭建流程</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        <div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            最新文章
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2021/10/12/BIM%E4%BB%8B%E7%BB%8D/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="BIM介绍">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-10-12T09:27:11.000Z">2021-10-12</time></div>
+                    <a href="/2021/10/12/BIM%E4%BB%8B%E7%BB%8D/" class="title has-link-black-ter is-size-6 has-text-weight-normal">BIM介绍</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="微服务知识体系">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-27T02:21:45.000Z">2021-09-27</time></div>
+                    <a href="/2021/09/27/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/" class="title has-link-black-ter is-size-6 has-text-weight-normal">微服务知识体系</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="bpmn流程模式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-18T09:12:12.000Z">2021-09-18</time></div>
+                    <a href="/2021/09/18/bpmn%E6%B5%81%E7%A8%8B%E6%A8%A1%E5%BC%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">bpmn流程模式</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="工作流设计">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-17T06:57:23.000Z">2021-09-17</time></div>
+                    <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">工作流设计</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="hexo搭建流程">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-16T03:42:31.000Z">2021-09-16</time></div>
+                    <a href="/2021/09/16/hexo%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">hexo搭建流程</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            归档
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/10/">
+                <span class="level-start">
+                    <span class="level-item">十月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                标签
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="BIM介绍" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2021 卢希强&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+<script src="/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="回到顶端" href="javascript:;" target="_blank" rel="noopener">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
