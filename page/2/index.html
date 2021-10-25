@@ -135,6 +135,113 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-09-08T08:59:44.000Z">2021-09-08</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 分钟 读完 (大约 1401 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2021/09/08/iOS%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%95%B4%E7%90%86/">iOS性能优化整理</a>
+            
+        </h1>
+        <div class="content">
+            <h1 id="iOS性能优化整理"><a href="#iOS性能优化整理" class="headerlink" title="iOS性能优化整理"></a>iOS性能优化整理</h1><h3 id="一、性能优化–卡顿"><a href="#一、性能优化–卡顿" class="headerlink" title="一、性能优化–卡顿"></a>一、性能优化–卡顿</h3><p>卡顿的原因主要是CPU、GPU引起的</p>
+<p>CPU(中央处理器): 对象的创建和销毁、对象属性的调整、布局计算、文本的计算和排版、图片的格式转换和解码、图像的绘制(Core Graphics)<br>GPU(图形处理器)：纹理的渲染</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3409012-6dc0f656a135c00a.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="img"></p>
+<ul>
+<li><h5 id="卡顿优化–CPU"><a href="#卡顿优化–CPU" class="headerlink" title="卡顿优化–CPU"></a>卡顿优化–CPU</h5><figure class="highlight objectivec hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">尽量试用轻量级对象，比如用不到事件处理的地方可以考虑试用<span class="hljs-built_in">CALayer</span>取代<span class="hljs-built_in">UIView</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">不要频繁的调用<span class="hljs-built_in">UIView</span>的相关属性，比如frame、bounds、transform等属性，尽量减少不必要的修改</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">尽量提前计算好布局，在有需要时一次性调整对应的属性，不要多次修改属性</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">Autolayout会比直接设置frame消耗更多的CPU资源</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">图片的size最好刚好跟<span class="hljs-built_in">UIImageView</span>的size保持一致</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">控制一下线程的最大并发数量</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">尽量把耗时的操作放在子线程，比如文本处理（尺寸计算、绘制），图片处理（解码、绘制）</span></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><h5 id="卡顿优化–GPU"><a href="#卡顿优化–GPU" class="headerlink" title="卡顿优化–GPU"></a>卡顿优化–GPU</h5><figure class="highlight angelscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">尽量避免短时间内大量图片的显示，尽可能多张突变合成一张显示。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">GPU能处理的最大纹理尺寸是  <span class="hljs-number">4096</span> x <span class="hljs-number">4096</span>，一旦超过这个尺寸，就会占用CPU资源进行处理，所以纹理尺寸尽量不要超过这个尺寸</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">尽量减少试图数量和层次</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">减少透明的视图(alpha &lt; <span class="hljs-number">1</span>)，不透明的就设置opaque为YES</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">尽量避免出现离屏渲染(设置view的圆角、遮罩、阴影)</span></pre></td></tr></table></figure>
+</li>
+<li><h5 id="离屏渲染"><a href="#离屏渲染" class="headerlink" title="离屏渲染"></a>离屏渲染</h5><p>在OpenGL中，GPU有两种渲染方式</p>
+<ol>
+<li><p>on-Screen Rendering：当前屏幕渲染，在当前用于显示的屏幕缓冲区进行渲染操作</p>
+</li>
+<li><p>off-Screen Rendering：离屏渲染，在当前屏幕缓冲区以外开辟一个新的缓冲区进行渲染操作。</p>
+<p>离屏渲染消耗性能的原因：</p>
+<figure class="highlight angelscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">1</span>、需要创建新的缓冲区</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">2</span>、离屏渲染的整个过程，需要多次切换上下文环境，显示从当前屏幕切换到离屏，等到离屏渲染结束后，将离屏缓冲区的渲染结果显示到屏幕上，又需要将上下文环境从离屏切换到当前屏幕。</span></pre></td></tr></table></figure>
+
+<p>哪些操作会触发离屏渲染</p>
+<figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">1</span><span class="hljs-string">.</span> <span class="hljs-string">光栅化，layer.shouldRasterize</span>  <span class="hljs-string">=</span> <span class="hljs-literal">YES</span><span class="hljs-string">;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">2</span><span class="hljs-string">.</span> <span class="hljs-string">遮罩，layer.mask</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">3</span><span class="hljs-string">.</span> <span class="hljs-string">圆角，同时设置layer.masksToBounds</span> <span class="hljs-string">=</span> <span class="hljs-literal">YES</span><span class="hljs-string">，layer.cornerRadius</span> <span class="hljs-string">大于</span> <span class="hljs-number">0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-string">可以考虑通过CoreGraphice绘制裁剪圆角，或者叫美工提供圆角图片。</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">4</span><span class="hljs-string">.</span> <span class="hljs-string">阴影，layer.shadowXXX，如果设置了layer.shadowPath</span> <span class="hljs-string">就不会产生离屏渲染</span></span></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="二、性能优化–耗电优化"><a href="#二、性能优化–耗电优化" class="headerlink" title="二、性能优化–耗电优化"></a>二、性能优化–耗电优化</h3><p><strong>app中主要的耗电来源于： CPU处理、网络、定位、图像处理</strong></p>
+<p>优化方案：</p>
+<ul>
+<li>尽可能降低CPU、GPU功耗</li>
+<li>减少使用定时器</li>
+<li>优化I/O操作，例如：</li>
+</ul>
+<figure class="highlight angelscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">1.</span> 尽量不要频繁的写入小数据，最好批量一次写入</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">2.</span> 读写大量重要数据时，考虑用dispatch_io，其提供了基于GCD的异步操作文件I/O的的API。用dispatch_io系统会优化磁盘访问</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">3.</span> 数据量比较大时，建议使用数据库(比如SQLite、CoreData)</span></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="网络优化"><a href="#网络优化" class="headerlink" title="网络优化"></a>网络优化</h4></li>
+</ul>
+<figure class="highlight angelscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">1.</span> 减少、压缩网络数据</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">2.</span> 如果多次请求的结果是相同的，尽量使用缓存</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">3.</span> 使用断点续传，否则网络不稳定时可能多次传输相同的内容</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">4.</span> 网络不可用时，不要尝试执行网路请求</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">5.</span> 让用户可以取消长时间运行或者速度很慢的网络操作，设置合适的超时时间</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">6.</span> 批量传输，比如：下载视频时，不要传输很小的数据包，直接下载整个文件或者一大块一大块的下载。如果下载广告，一次性多下载一些，然后在慢慢展示。如果下载电子邮件，一次下载多封，不要一封一封的下载</span></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="定位优化"><a href="#定位优化" class="headerlink" title="定位优化"></a>定位优化</h4><figure class="highlight angelscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">1</span>、如果只是需要快速确认用户位置，最好用CLLocationManager的requestLocation，定位完后，会自动让定位硬件断电。</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">2</span>、如果不是导航应用，尽量不要实时更新位置，定位完毕就关掉定位服务</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">3</span>、尽量降低定位精度，比如尽量不要使用最高的kCLLocationAccuracyBest</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">4</span>、需要后台定位时，尽量设置pausesLocationUpdatesAutomaticall为YES，如果用户不太可能移动的时候系统会自动暂停位置更新</span></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="三、-性能优化-–-APP启动优化"><a href="#三、-性能优化-–-APP启动优化" class="headerlink" title="三、 性能优化 – APP启动优化"></a>三、 性能优化 – APP启动优化</h3><p><img src="https://upload-images.jianshu.io/upload_images/3409012-6526057bd0275d03.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="img"></p>
+<p>APP冷启动可以概括为三个阶段</p>
+<blockquote>
+<p>dyld</p>
+<p>runtime</p>
+<p>main</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/3409012-4be7c1c7affd91ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/format/webp" alt="img"></p>
+<ul>
+<li><h4 id="dyld"><a href="#dyld" class="headerlink" title="dyld"></a>dyld</h4></li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/3409012-cb82278600dfd514.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<ul>
+<li><h4 id="runtime"><a href="#runtime" class="headerlink" title="runtime"></a>runtime</h4></li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/3409012-9b181aaab2e1f099.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/3409012-32280bf8410bc587.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<h4 id="APP启动优化方案："><a href="#APP启动优化方案：" class="headerlink" title="APP启动优化方案："></a>APP启动优化方案：</h4><p><img src="https://upload-images.jianshu.io/upload_images/3409012-16167c889a8c9995.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+<h3 id="四、-安装包瘦身"><a href="#四、-安装包瘦身" class="headerlink" title="四、 安装包瘦身"></a>四、 安装包瘦身</h3><p><img src="https://upload-images.jianshu.io/upload_images/3409012-6f21d7fdf74ad18d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="img"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-04-18T15:18:01.000Z">2020-04-18</time>
                 
                 
@@ -774,7 +881,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        14
+                        15
                     </p>
                 </div>
             </div>
@@ -875,6 +982,25 @@
         
         <article class="media">
             
+            <a href="/2021/10/25/%E8%BD%AF%E4%BB%B6%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E5%8F%8A%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1%E8%8D%89%E6%A1%88/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="软件组织结构及权限管理设计草案">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-10-25T01:35:13.000Z">2021-10-25</time></div>
+                    <a href="/2021/10/25/%E8%BD%AF%E4%BB%B6%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E5%8F%8A%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1%E8%8D%89%E6%A1%88/" class="title has-link-black-ter is-size-6 has-text-weight-normal">软件组织结构及权限管理设计草案</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2021/10/12/%E4%BB%80%E4%B9%88%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="什么是工作流">
@@ -949,25 +1075,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="工作流设计">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-17T06:57:23.000Z">2021-09-17</time></div>
-                    <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">工作流设计</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -985,7 +1092,7 @@
                     <span class="level-item">十月 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -1060,6 +1167,25 @@
         
         <article class="media">
             
+            <a href="/2021/10/25/%E8%BD%AF%E4%BB%B6%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E5%8F%8A%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1%E8%8D%89%E6%A1%88/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="软件组织结构及权限管理设计草案">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-10-25T01:35:13.000Z">2021-10-25</time></div>
+                    <a href="/2021/10/25/%E8%BD%AF%E4%BB%B6%E7%BB%84%E7%BB%87%E7%BB%93%E6%9E%84%E5%8F%8A%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E8%AE%BE%E8%AE%A1%E8%8D%89%E6%A1%88/" class="title has-link-black-ter is-size-6 has-text-weight-normal">软件组织结构及权限管理设计草案</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2021/10/12/%E4%BB%80%E4%B9%88%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="什么是工作流">
@@ -1134,25 +1260,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="工作流设计">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-17T06:57:23.000Z">2021-09-17</time></div>
-                    <a href="/2021/09/17/%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">工作流设计</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1170,7 +1277,7 @@
                     <span class="level-item">十月 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
